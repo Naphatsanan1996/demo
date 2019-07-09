@@ -112,48 +112,14 @@ DrawView extends View {
         canvas.drawLine(arr[3][1], arr[3][0], arr[4][1], arr[4][0], ppaint);
         canvas.drawLine(arr[5][1], arr[5][0], arr[6][1], arr[6][0], ppaint);
         canvas.drawLine(arr[6][1], arr[6][0], arr[7][1], arr[7][0], ppaint);
-        /*float x, y;
-        x = (arr[8][1] + arr[11][1]) / 2 + 5;
-        y = (arr[8][0] + arr[11][0]) / 2 + 5;*/
-
-        /*canvas.drawLine(arr[1][1],arr[1][0], x, y, ppaint);
-        canvas.drawLine(x, y, arr[8][1], arr[8][0], ppaint);
-        canvas.drawLine(x, y, arr[11][1], arr[11][0], ppaint);*/
-
-        /*canvas.drawLine(arr[1][1], arr[1][0], arr[8][1], arr[8][0], ppaint);
-        canvas.drawLine(arr[1][1], arr[1][0], arr[11][1], arr[11][0], ppaint);
-
-        canvas.drawLine(arr[8][1], arr[8][0], arr[9][1], arr[9][0], ppaint);
-        canvas.drawLine(arr[9][1], arr[9][0], arr[10][1], arr[10][0], ppaint);
-        canvas.drawLine(arr[11][1], arr[11][0], arr[12][1], arr[12][0], ppaint);
-        canvas.drawLine(arr[12][1], arr[12][0], arr[13][1], arr[13][0], ppaint);*/
 
         for (int i = 0; i < 8; i++) {
 //            Log.d("check1", i + ": X= " + arr[i][0] + " Y= " + arr[i][1]);
             canvas.drawPoint(arr[i][1], arr[i][0], paint[i]);
 
             Log.d("check2", i + ": y= " + arr[i][0] + "---" + position[i][0] + " x= " + arr[i][1] + "---" + position[i][1]);
-
-
-//
-
-
-
-        }
+}
         Position1(canvas);
-//        Position1_2(canvas); /* เริ่มท่าที่ 1.1 ยกมือขึ้นตั้งฉากกับศอก*/
-//            Position1_3(canvas);
-//            Position2_1(canvas);
-//            Position2_2(canvas);
-//            Position2_3(canvas);/*พนมมือ ปลายนิ้วชี้ขึ้น*/
-//            Position4(canvas);/*พนมมือ ปลายนิ้วชี้ลง*/
-//            Position5_2(canvas);/*ยกมือขวาขึ้นสุดแขน*/
-//            Position5_3(canvas);
-//            Position6_2(canvas);
-//            Position6_3(canvas);
-        /*  ท่าเตรียม ของ ทุกท่า */
-//        canvas.drawColor(00000000,new PorterDuff.Mode());
-//
     }
 
     public static void setArr(float[][] inputArr) {
@@ -1134,38 +1100,6 @@ DrawView extends View {
         }
     }
 
-
-//    public void setTimeText(final View view) {
-//        TextView textTime = view.findViewById(R.id.texttime);
-//        CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                String strTime = String.format("%.1f"
-//                        , (double) millisUntilFinished / 1000);
-//                textTime.setText(strTime);
-//            }
-//            @Override
-//            public void onFinish() {
-//                textTime.setText("next");
-//
-//            }
-//        };
-//
-//    }
-
-//    public void CheckPosition() {
-//        for (int i = 0; i < 8; i++) {
-//            x1[i] = position[i][0];
-//            x2[i] = arr[i][0];
-//            y1[i] = position[i][1];
-//            y2[i] = arr[i][1];
-//            X = (x1[i] - x2[i]) * (x1[i] - x2[i]);
-//            Y = (y1[i] - y2[i]) * (y1[i] - y2[i]);
-//            result[i] = Math.sqrt(X + Y);
-//            Log.d("Sqrt ", "index : " + i + " == " + result[i] + " ");
-//
-//    }
-//    }
 
 
 }

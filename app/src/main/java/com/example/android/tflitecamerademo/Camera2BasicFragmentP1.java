@@ -68,7 +68,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Basic fragments for the Camera.
  */
-public class Camera2BasicFragment extends Fragment
+public class Camera2BasicFragmentP1 extends Fragment
         implements FragmentCompat.OnRequestPermissionsResultCallback {
 
     /**
@@ -82,19 +82,11 @@ public class Camera2BasicFragment extends Fragment
 
     private static final int PERMISSIONS_REQUEST_CODE = 1;
 
-    public static TextView percentageText;
+    public static TextView nametext;
 
-    public static TextView percentageText1;
+    public static TextView textContent;
 
-    public static TextView percentageText2;
 
-    public static TextView percentageText3;
-
-    public static TextView percentageText4;
-
-    public static TextView percentageText5;
-
-    public static TextView percentageText6;
 
 //    public static LinearLayout bottomInfoLayout;
 
@@ -238,8 +230,8 @@ public class Camera2BasicFragment extends Fragment
                 }
             };
 
-    public static Camera2BasicFragment newInstance() {
-        return new Camera2BasicFragment();
+    public static Camera2BasicFragmentP1 newInstance() {
+        return new Camera2BasicFragmentP1();
     }
 
     /**
@@ -272,11 +264,11 @@ public class Camera2BasicFragment extends Fragment
         // Get references to widgets.
         textureView = view.findViewById(R.id.texture);
 //        bottomInfoLayout = view.findViewById(R.id.bottom_info_view);
-        percentageText = view.findViewById(R.id.percentage);
-        percentageText1 = view.findViewById(R.id.percentage1);
+        nametext = view.findViewById(R.id.percentage);
+        textContent = view.findViewById(R.id.percentage1);
         ImageView imageView = view.findViewById(R.id.imageView2) ;
         imageView.setImageResource(R.drawable.t3);
-
+        textContent.setText("นั่งหลังตรง วางมือบนหน้าตัก");
 
     }
 
@@ -418,7 +410,7 @@ public class Camera2BasicFragment extends Fragment
     }
 
     /**
-     * Opens the camera specified by {@link Camera2BasicFragment#cameraId}.
+     * Opens the camera specified by {@link Camera2BasicFragmentP1#cameraId}.
      */
     private void openCamera(int width, int height) {
         if (!checkedPermissions && !allPermissionsGranted()) {
