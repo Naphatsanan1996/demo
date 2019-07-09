@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.tflitecamerademo.Fragment.CameraPosition1Fragment">
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <com.example.android.tflitecamerademo.view.AutoFitTextureView
+           android:id="@+id/texture"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/bottom_info_view" />
+       <com.example.android.tflitecamerademo.view.DrawView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/bottom_info_view"
+           android:background="@android:color/transparent"
+           />
+       <TextView
+           android:id="@+id/texttime"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:layout_margin="20dp"
+           android:text="10"
+           android:textSize="50dp"
+           android:background="#FFFFFF"
+           />
+
+   </RelativeLayout>
+</FrameLayout>
