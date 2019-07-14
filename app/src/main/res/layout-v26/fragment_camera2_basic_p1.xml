@@ -25,18 +25,18 @@
         android:background="#bb7700">
 
         <ImageView
-            android:id="@+id/imageposition1"
+            android:id="@+id/imageposition"
             android:layout_width="match_parent"
             android:layout_height="532dp" />
 
         <Button
-            android:id="@+id/switchCameraButton1"
+            android:id="@+id/switchCameraButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/switchCamera" />
 
         <com.example.android.tflitecamerademo.view.AutoFitTextureView
-            android:id="@+id/texture1"
+            android:id="@+id/texture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/bottom_info_view" />
@@ -44,12 +44,12 @@
         <com.example.android.tflitecamerademo.view.DrawView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/bottom_info_view1"
+            android:layout_above="@+id/bottom_info_view"
             android:background="@android:color/transparent"
             />
 
         <TextView
-            android:id="@+id/texttime1"
+            android:id="@+id/texttime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -60,14 +60,14 @@
             />
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/bottom_info_view1"
+            android:id="@+id/bottom_info_view"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_alignParentBottom="true"
             android:background="@android:color/white">
 
             <TextView
-                android:id="@+id/percentage1"
+                android:id="@+id/percentage"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
                 android:layout_marginStart="8dp"
@@ -76,7 +76,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Position 1.1"
+                android:text="เตรียม"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
-                android:id="@+id/imageView21"
+                android:id="@+id/imageView2"
                 android:layout_width="124dp"
                 android:layout_height="139dp"
                 android:layout_marginStart="8dp"
@@ -102,17 +102,21 @@
                 app:srcCompat="@drawable/model1" />
 
 
+
             <TextView
-                android:id="@+id/percentage11"
+                android:id="@+id/percentage1"
                 android:layout_width="231dp"
                 android:layout_height="142dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="รอ...."
                 android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/imageView21"
-                app:layout_constraintTop_toBottomOf="@+id/percentage1" />
+
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/percentage"/>
 
 
 

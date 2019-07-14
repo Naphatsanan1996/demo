@@ -37,6 +37,8 @@ public class CameraView extends View {
     private void init() {
 //        Fragment fragment = new PropertyFragment();
 
+
+
         if (fragmentManager == null) {
 //            FragmentManager fragmentManager = fragment.getFragmentManager();
             FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();

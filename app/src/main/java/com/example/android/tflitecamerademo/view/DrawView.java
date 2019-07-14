@@ -118,8 +118,9 @@ DrawView extends View {
             canvas.drawPoint(arr[i][1], arr[i][0], paint[i]);
 
             Log.d("check2", i + ": y= " + arr[i][0] + "---" + position[i][0] + " x= " + arr[i][1] + "---" + position[i][1]);
-}
-        Position1(canvas);
+        }
+       Position1(canvas);
+
     }
 
     public static void setArr(float[][] inputArr) {
@@ -129,6 +130,7 @@ DrawView extends View {
         }
         myView.invalidate();
     }
+
 
     public void Position1(Canvas canvas) {
         int x = (int) arr[1][1];
@@ -195,33 +197,38 @@ DrawView extends View {
             canvas.drawCircle(arr[2][1], arr[2][0], 40, paint[11]);
             ch[2] = true;
         }
-        if (result[3] >= 0 && result[3] <= 50) {
+        if (result[3] >= 0 && result[3] <= 80) {
             canvas.drawCircle(arr[3][1], arr[3][0], 40, paint[11]);
             ch[3] = true;
         }
-        if (result[4] >= 0 && result[4] <= 50) {
+        if (result[4] >= 0 && result[4] <= 80) {
             canvas.drawCircle(arr[4][1], arr[4][0], 40, paint[11]);
             ch[4] = true;
         }
-        if (result[5] >= 0 && result[5] <= 50) {
+        if (result[5] >= 0 && result[5] <= 80) {
             canvas.drawCircle(arr[5][1], arr[5][0], 40, paint[11]);
             ch[5] = true;
         }
-        if (result[6] >= 0 && result[6] <= 50) {
+        if (result[6] >= 0 && result[6] <= 80) {
             canvas.drawCircle(arr[6][1], arr[6][0], 40, paint[11]);
             ch[6] = true;
         }
-        if (result[7] >= 0 && result[7] <= 50) {
+        if (result[7] >= 0 && result[7] <= 80) {
             canvas.drawCircle(arr[7][1], arr[7][0], 40, paint[11]);
             ch[7] = true;
         }
 
         if (ch[0] == true && ch[1] == true) {
-//            TextView textView = myView.findViewById(R.id.texttime);
-//            textView.setText("OK Let go!!!!");
+            TextView textView = myView.findViewById(R.id.texttime);
+////            textView.setText("OK Let go!!!!");
 //            Paint p = new Paint();
 //            p.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
 //            canvas.drawRect(0,0,canvas.getWidth(),canvas.getHeight(), p);
+//
+//                Position1_2(canvas);
+
+
+
 
         }
     }
@@ -1099,6 +1106,12 @@ DrawView extends View {
             ch[7] = true;
         }
     }
+
+
+
+
+
+
 
 
 

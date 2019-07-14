@@ -190,7 +190,9 @@ public abstract class ImageClassifier {
         long endTime = SystemClock.uptimeMillis();
         Log.d(TAG, "Timecost to run model inference: " + Long.toString(endTime - startTime));
 
+
         drawBodyPoint();
+
 
         // Smooth the results across frames.
         //applyFilter();
@@ -219,12 +221,13 @@ public abstract class ImageClassifier {
             result = findMaximumIndex(heatmap);
 //            Log.d("Bodypoint", "index[" + k + "] = " + " " + result[0] + " " + result[1] + " ");/*point Body Position*/
             arr[k] = result;
+
         }
         DrawView.setArr(arr);
 
 
-
     }
+  
 
     private static float[] findMaximumIndex(float[][] a) {
         float maxVal = -99999;
@@ -263,30 +266,7 @@ public abstract class ImageClassifier {
     }
 
 
-  /*
-  void applyFilter() {
-    int numLabels = getNumLabels();
 
-    // Low pass filter `labelProbArray` into the first stage of the filter.
-    for (int j = 0; j < numLabels; ++j) {
-    for (int j = 0; j < numLabesetProbabilityls; ++j) {
-      filterLabelProbArray[0][j] +=
-          FILTER_FACTOR * (getProbability(j) - filterLabelProbArray[0][j]);
-    }
-    // Low pass filter each stage into the next.
-    for (int i = 1; i < FILTER_STAGES; ++i) {
-      for (int j = 0; j < numLabels; ++j) {
-        filterLabelProbArray[i][j] +=
-            FILTER_FACTOR * (filterLabelProbArray[i - 1][j] - filterLabelProbArray[i][j]);
-      }
-    }
-
-    // Copy the last stage filter output back to `labelProbArray`.
-    for (int j = 0; j < numLabels; ++j) {
-      setProbability(j, filterLabelProbArray[FILTER_STAGES - 1][j]);
-    }
-  }
-  */
 
     private void recreateInterpreter() {
         if (tflite != null) {
