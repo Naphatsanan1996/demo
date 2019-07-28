@@ -263,7 +263,7 @@ public class Camera2BasicFragment extends Fragment
         imageView.setImageResource(R.drawable.t3);
         TextView textView = view.findViewById(R.id.texttime);
 
-        runtimePosition(textView,imageView);
+//        runtimePosition(textView,imageView);
 
     }
     /**
@@ -612,300 +612,300 @@ public class Camera2BasicFragment extends Fragment
         }
     }
 
-    private  void  runtimePosition(TextView textView,ImageView imageView){
-        new CountDownTimer(6000, 1000) {
-
-            @Override
-            public void onTick(long millisUntilFinished) {
-                textView.setText("" + millisUntilFinished / 1000);
-                //here you can have your logic to set text to edittext
-            }
-
-            @Override
-            public void onFinish() {
-                textView.setText("5");
-                imageView.setImageResource(R.drawable.p01);
-                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                percentageText.setText("ท่าที่ 1 ");
-
-                new CountDownTimer(6000, 1000) {
-
-                    @Override
-                    public void onTick(long millisUntilFinished) {
-                        textView.setText("" + millisUntilFinished / 1000);
-                        //here you can have your logic to set text to edittext
-                    }
-
-                    @Override
-                    public void onFinish() {
-                        textView.setText("5");
-                        imageView.setImageResource(R.drawable.p02);
-                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                        percentageText.setText("ท่าที่ 1.1 ");
-                        new CountDownTimer(6000, 1000) {
-
-                            @Override
-                            public void onTick(long millisUntilFinished) {
-                                textView.setText("" + millisUntilFinished / 1000);
-                                //here you can have your logic to set text to edittext
-                            }
-
-                            @Override
-                            public void onFinish() {
-                                textView.setText("5");
-                                imageView.setImageResource(R.drawable.p03);
-                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                percentageText.setText("ท่าที่ 1.2 ");
-
-                                new CountDownTimer(11000, 1000) {
-
-                                    @Override
-                                    public void onTick(long millisUntilFinished) {
-                                        textView.setText("" + millisUntilFinished / 1000);
-                                        //here you can have your logic to set text to edittext
-                                    }
-
-                                    @Override
-                                    public void onFinish() {
-                                        textView.setText("5");
-                                        imageView.setImageResource(R.drawable.p01);
-                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                        percentageText.setText("ท่าที่ 2 ");
-
-                                        new CountDownTimer(6000, 1000) {
-
-                                            @Override
-                                            public void onTick(long millisUntilFinished) {
-                                                textView.setText("" + millisUntilFinished / 1000);
-                                                //here you can have your logic to set text to edittext
-                                            }
-
-                                            @Override
-                                            public void onFinish() {
-                                                textView.setText("5");
-                                                imageView.setImageResource(R.drawable.p04);
-                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                percentageText.setText("ท่าที่ 2.1 ");
-
-                                                new CountDownTimer(11000, 1000) {
-
-                                                    @Override
-                                                    public void onTick(long millisUntilFinished) {
-                                                        textView.setText("" + millisUntilFinished / 1000);
-                                                        //here you can have your logic to set text to edittext
-                                                    }
-
-                                                    @Override
-                                                    public void onFinish() {
-                                                        textView.setText("5");
-                                                        imageView.setImageResource(R.drawable.p05);
-                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                        percentageText.setText("ท่าที่ 2.2 ");
-
-                                                        new CountDownTimer(6000, 1000) {
-
-                                                            @Override
-                                                            public void onTick(long millisUntilFinished) {
-                                                                textView.setText("" + millisUntilFinished / 1000);
-                                                                //here you can have your logic to set text to edittext
-                                                            }
-
-                                                            @Override
-                                                            public void onFinish() {
-                                                                textView.setText("5");
-                                                                imageView.setImageResource(R.drawable.p01);
-                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                percentageText.setText("ท่าที่ 3 ");
-
-                                                                new CountDownTimer(6000, 1000) {
-
-                                                                    @Override
-                                                                    public void onTick(long millisUntilFinished) {
-                                                                        textView.setText("" + millisUntilFinished / 1000);
-                                                                        //here you can have your logic to set text to edittext
-                                                                    }
-
-                                                                    @Override
-                                                                    public void onFinish() {
-                                                                        textView.setText("5");
-                                                                        imageView.setImageResource(R.drawable.p06);
-                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                        percentageText.setText("ท่าที่ 3.1 ");
-
-                                                                        new CountDownTimer(11000, 1000) {
-
-                                                                            @Override
-                                                                            public void onTick(long millisUntilFinished) {
-                                                                                textView.setText("" + millisUntilFinished / 1000);
-                                                                                //here you can have your logic to set text to edittext
-                                                                            }
-
-                                                                            @Override
-                                                                            public void onFinish() {
-                                                                                textView.setText("5");
-                                                                                imageView.setImageResource(R.drawable.p01);
-                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                percentageText.setText("ท่าที่ 4 ");
-
-                                                                                new CountDownTimer(11000, 1000) {
-
-                                                                                    @Override
-                                                                                    public void onTick(long millisUntilFinished) {
-                                                                                        textView.setText("" + millisUntilFinished / 1000);
-                                                                                        //here you can have your logic to set text to edittext
-                                                                                    }
-
-                                                                                    @Override
-                                                                                    public void onFinish() {
-                                                                                        textView.setText("5");
-                                                                                        imageView.setImageResource(R.drawable.p07);
-                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                        percentageText.setText("ท่าที่ 4.1 ");
-
-                                                                                        new CountDownTimer(11000, 1000) {
-
-                                                                                            @Override
-                                                                                            public void onTick(long millisUntilFinished) {
-                                                                                                textView.setText("" + millisUntilFinished / 1000);
-                                                                                                //here you can have your logic to set text to edittext
-                                                                                            }
-
-                                                                                            @Override
-                                                                                            public void onFinish() {
-                                                                                                textView.setText("5");
-                                                                                                imageView.setImageResource(R.drawable.p01);
-                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                percentageText.setText("ท่าที่ 5 ");
-
-                                                                                                new CountDownTimer(11000, 1000) {
-
-                                                                                                    @Override
-                                                                                                    public void onTick(long millisUntilFinished) {
-                                                                                                        textView.setText("" + millisUntilFinished / 1000);
-                                                                                                        //here you can have your logic to set text to edittext
-                                                                                                    }
-
-                                                                                                    @Override
-                                                                                                    public void onFinish() {
-                                                                                                        textView.setText("5");
-                                                                                                        imageView.setImageResource(R.drawable.p08);
-                                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                        percentageText.setText("ท่าที่ 5.1 ");
-
-                                                                                                        new CountDownTimer(11000, 1000) {
-
-                                                                                                            @Override
-                                                                                                            public void onTick(long millisUntilFinished) {
-                                                                                                                textView.setText("" + millisUntilFinished / 1000);
-                                                                                                                //here you can have your logic to set text to edittext
-                                                                                                            }
-
-                                                                                                            @Override
-                                                                                                            public void onFinish() {
-                                                                                                                textView.setText("5");
-                                                                                                                imageView.setImageResource(R.drawable.p09);
-                                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                                percentageText.setText("ท่าที่ 5.2 ");
-
-                                                                                                                new CountDownTimer(11000, 1000) {
-
-                                                                                                                    @Override
-                                                                                                                    public void onTick(long millisUntilFinished) {
-                                                                                                                        textView.setText("" + millisUntilFinished / 1000);
-                                                                                                                        //here you can have your logic to set text to edittext
-                                                                                                                    }
-
-                                                                                                                    @Override
-                                                                                                                    public void onFinish() {
-                                                                                                                        textView.setText("5");
-                                                                                                                        imageView.setImageResource(R.drawable.p01);
-                                                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                                        percentageText.setText("ท่าที่ 6 ");
-
-                                                                                                                        new CountDownTimer(11000, 1000) {
-
-                                                                                                                            @Override
-                                                                                                                            public void onTick(long millisUntilFinished) {
-                                                                                                                                textView.setText("" + millisUntilFinished / 1000);
-                                                                                                                                //here you can have your logic to set text to edittext
-                                                                                                                            }
-
-                                                                                                                            @Override
-                                                                                                                            public void onFinish() {
-                                                                                                                                textView.setText("5");
-                                                                                                                                imageView.setImageResource(R.drawable.p11);
-                                                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                                                percentageText.setText("ท่าที่ 6.1 ");
-                                                                                                                                new CountDownTimer(11000, 1000) {
-
-                                                                                                                                    @Override
-                                                                                                                                    public void onTick(long millisUntilFinished) {
-                                                                                                                                        textView.setText("" + millisUntilFinished / 1000);
-                                                                                                                                        //here you can have your logic to set text to edittext
-                                                                                                                                    }
-
-                                                                                                                                    @Override
-                                                                                                                                    public void onFinish() {
-                                                                                                                                        textView.setText("5");
-                                                                                                                                        imageView.setImageResource(R.drawable.p10);
-                                                                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                                                        percentageText.setText("ท่าที่ 6.2 ");
-
-                                                                                                                                        new CountDownTimer(11000, 1000) {
-
-                                                                                                                                            @Override
-                                                                                                                                            public void onTick(long millisUntilFinished) {
-                                                                                                                                                textView.setText("" + millisUntilFinished / 1000);
-                                                                                                                                                //here you can have your logic to set text to edittext
-                                                                                                                                            }
-
-                                                                                                                                            @Override
-                                                                                                                                            public void onFinish() {
-                                                                                                                                                textView.setText("จบ");
-                                                                                                                                                imageView.setImageResource(R.drawable.p01);
-                                                                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
-                                                                                                                                                percentageText.setText("สิ้นสุด");
-
-
-                                                                                                                                            }
-                                                                                                                                        }.start();
-                                                                                                                                    }
-                                                                                                                                }.start();
-
-                                                                                                                            }
-                                                                                                                        }.start();
-                                                                                                                    }
-                                                                                                                }.start();
-                                                                                                            }
-                                                                                                        }.start();
-
-                                                                                                    }
-                                                                                                }.start();
-                                                                                            }
-                                                                                        }.start();
-                                                                                    }
-                                                                                }.start();
-                                                                            }
-                                                                        }.start();
-                                                                    }
-                                                                }.start();
-
-                                                            }
-                                                        }.start();
-                                                    }
-                                                }.start();
-                                            }
-                                        }.start();
-                                    }
-                                }.start();
-                            }
-                        }.start();
-
-                    }
-                }.start();
-            }
-        }.start();
-
-    }
+//    private  void  runtimePosition(TextView textView,ImageView imageView){
+//        new CountDownTimer(1000, 1000) {
+//
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                textView.setText("" + millisUntilFinished / 1000);
+//                //here you can have your logic to set text to edittext
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                textView.setText("5");
+//                imageView.setImageResource(R.drawable.p04);
+//                percentageText1.setText("ประสานมือทั้งสองข้างไว้ที่ท้ายทอย\nให้รู้สึกตึงบริเวณกล้ามเนื้อไหล่\nและต้นแขนเล็กน้อย ");
+//                percentageText.setText("ท่าที่ 1.2 ");
+//
+////                new CountDownTimer(6000, 1000) {
+////
+////                    @Override
+////                    public void onTick(long millisUntilFinished) {
+////                        textView.setText("" + millisUntilFinished / 1000);
+////                        //here you can have your logic to set text to edittext
+////                    }
+////
+////                    @Override
+////                    public void onFinish() {
+////                        textView.setText("5");
+////                        imageView.setImageResource(R.drawable.p02);
+////                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                        percentageText.setText("ท่าที่ 1.1 ");
+////                        new CountDownTimer(6000, 1000) {
+////
+////                            @Override
+////                            public void onTick(long millisUntilFinished) {
+////                                textView.setText("" + millisUntilFinished / 1000);
+////                                //here you can have your logic to set text to edittext
+////                            }
+////
+////                            @Override
+////                            public void onFinish() {
+////                                textView.setText("5");
+////                                imageView.setImageResource(R.drawable.p03);
+////                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                percentageText.setText("ท่าที่ 1.2 ");
+////
+////                                new CountDownTimer(11000, 1000) {
+////
+////                                    @Override
+////                                    public void onTick(long millisUntilFinished) {
+////                                        textView.setText("" + millisUntilFinished / 1000);
+////                                        //here you can have your logic to set text to edittext
+////                                    }
+////
+////                                    @Override
+////                                    public void onFinish() {
+////                                        textView.setText("5");
+////                                        imageView.setImageResource(R.drawable.p01);
+////                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                        percentageText.setText("ท่าที่ 2 ");
+////
+////                                        new CountDownTimer(6000, 1000) {
+////
+////                                            @Override
+////                                            public void onTick(long millisUntilFinished) {
+////                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                //here you can have your logic to set text to edittext
+////                                            }
+////
+////                                            @Override
+////                                            public void onFinish() {
+////                                                textView.setText("5");
+////                                                imageView.setImageResource(R.drawable.p04);
+////                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                percentageText.setText("ท่าที่ 2.1 ");
+////
+////                                                new CountDownTimer(11000, 1000) {
+////
+////                                                    @Override
+////                                                    public void onTick(long millisUntilFinished) {
+////                                                        textView.setText("" + millisUntilFinished / 1000);
+////                                                        //here you can have your logic to set text to edittext
+////                                                    }
+////
+////                                                    @Override
+////                                                    public void onFinish() {
+////                                                        textView.setText("5");
+////                                                        imageView.setImageResource(R.drawable.p05);
+////                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                        percentageText.setText("ท่าที่ 2.2 ");
+////
+////                                                        new CountDownTimer(6000, 1000) {
+////
+////                                                            @Override
+////                                                            public void onTick(long millisUntilFinished) {
+////                                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                                //here you can have your logic to set text to edittext
+////                                                            }
+////
+////                                                            @Override
+////                                                            public void onFinish() {
+////                                                                textView.setText("5");
+////                                                                imageView.setImageResource(R.drawable.p01);
+////                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                percentageText.setText("ท่าที่ 3 ");
+////
+////                                                                new CountDownTimer(6000, 1000) {
+////
+////                                                                    @Override
+////                                                                    public void onTick(long millisUntilFinished) {
+////                                                                        textView.setText("" + millisUntilFinished / 1000);
+////                                                                        //here you can have your logic to set text to edittext
+////                                                                    }
+////
+////                                                                    @Override
+////                                                                    public void onFinish() {
+////                                                                        textView.setText("5");
+////                                                                        imageView.setImageResource(R.drawable.p06);
+////                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                        percentageText.setText("ท่าที่ 3.1 ");
+////
+////                                                                        new CountDownTimer(11000, 1000) {
+////
+////                                                                            @Override
+////                                                                            public void onTick(long millisUntilFinished) {
+////                                                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                                                //here you can have your logic to set text to edittext
+////                                                                            }
+////
+////                                                                            @Override
+////                                                                            public void onFinish() {
+////                                                                                textView.setText("5");
+////                                                                                imageView.setImageResource(R.drawable.p01);
+////                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                percentageText.setText("ท่าที่ 4 ");
+////
+////                                                                                new CountDownTimer(11000, 1000) {
+////
+////                                                                                    @Override
+////                                                                                    public void onTick(long millisUntilFinished) {
+////                                                                                        textView.setText("" + millisUntilFinished / 1000);
+////                                                                                        //here you can have your logic to set text to edittext
+////                                                                                    }
+////
+////                                                                                    @Override
+////                                                                                    public void onFinish() {
+////                                                                                        textView.setText("5");
+////                                                                                        imageView.setImageResource(R.drawable.p07);
+////                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                        percentageText.setText("ท่าที่ 4.1 ");
+////
+////                                                                                        new CountDownTimer(11000, 1000) {
+////
+////                                                                                            @Override
+////                                                                                            public void onTick(long millisUntilFinished) {
+////                                                                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                //here you can have your logic to set text to edittext
+////                                                                                            }
+////
+////                                                                                            @Override
+////                                                                                            public void onFinish() {
+////                                                                                                textView.setText("5");
+////                                                                                                imageView.setImageResource(R.drawable.p01);
+////                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                percentageText.setText("ท่าที่ 5 ");
+////
+////                                                                                                new CountDownTimer(11000, 1000) {
+////
+////                                                                                                    @Override
+////                                                                                                    public void onTick(long millisUntilFinished) {
+////                                                                                                        textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                        //here you can have your logic to set text to edittext
+////                                                                                                    }
+////
+////                                                                                                    @Override
+////                                                                                                    public void onFinish() {
+////                                                                                                        textView.setText("5");
+////                                                                                                        imageView.setImageResource(R.drawable.p08);
+////                                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                        percentageText.setText("ท่าที่ 5.1 ");
+////
+////                                                                                                        new CountDownTimer(11000, 1000) {
+////
+////                                                                                                            @Override
+////                                                                                                            public void onTick(long millisUntilFinished) {
+////                                                                                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                                //here you can have your logic to set text to edittext
+////                                                                                                            }
+////
+////                                                                                                            @Override
+////                                                                                                            public void onFinish() {
+////                                                                                                                textView.setText("5");
+////                                                                                                                imageView.setImageResource(R.drawable.p09);
+////                                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                                percentageText.setText("ท่าที่ 5.2 ");
+////
+////                                                                                                                new CountDownTimer(11000, 1000) {
+////
+////                                                                                                                    @Override
+////                                                                                                                    public void onTick(long millisUntilFinished) {
+////                                                                                                                        textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                                        //here you can have your logic to set text to edittext
+////                                                                                                                    }
+////
+////                                                                                                                    @Override
+////                                                                                                                    public void onFinish() {
+////                                                                                                                        textView.setText("5");
+////                                                                                                                        imageView.setImageResource(R.drawable.p01);
+////                                                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                                        percentageText.setText("ท่าที่ 6 ");
+////
+////                                                                                                                        new CountDownTimer(11000, 1000) {
+////
+////                                                                                                                            @Override
+////                                                                                                                            public void onTick(long millisUntilFinished) {
+////                                                                                                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                                                //here you can have your logic to set text to edittext
+////                                                                                                                            }
+////
+////                                                                                                                            @Override
+////                                                                                                                            public void onFinish() {
+////                                                                                                                                textView.setText("5");
+////                                                                                                                                imageView.setImageResource(R.drawable.p11);
+////                                                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                                                percentageText.setText("ท่าที่ 6.1 ");
+////                                                                                                                                new CountDownTimer(11000, 1000) {
+////
+////                                                                                                                                    @Override
+////                                                                                                                                    public void onTick(long millisUntilFinished) {
+////                                                                                                                                        textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                                                        //here you can have your logic to set text to edittext
+////                                                                                                                                    }
+////
+////                                                                                                                                    @Override
+////                                                                                                                                    public void onFinish() {
+////                                                                                                                                        textView.setText("5");
+////                                                                                                                                        imageView.setImageResource(R.drawable.p10);
+////                                                                                                                                        percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                                                        percentageText.setText("ท่าที่ 6.2 ");
+////
+////                                                                                                                                        new CountDownTimer(11000, 1000) {
+////
+////                                                                                                                                            @Override
+////                                                                                                                                            public void onTick(long millisUntilFinished) {
+////                                                                                                                                                textView.setText("" + millisUntilFinished / 1000);
+////                                                                                                                                                //here you can have your logic to set text to edittext
+////                                                                                                                                            }
+////
+////                                                                                                                                            @Override
+////                                                                                                                                            public void onFinish() {
+////                                                                                                                                                textView.setText("จบ");
+////                                                                                                                                                imageView.setImageResource(R.drawable.p01);
+////                                                                                                                                                percentageText1.setText("นั่งหลังตรง \n วางมือลงที่หน้าตัก");
+////                                                                                                                                                percentageText.setText("สิ้นสุด");
+////
+////
+////                                                                                                                                            }
+////                                                                                                                                        }.start();
+////                                                                                                                                    }
+////                                                                                                                                }.start();
+////
+////                                                                                                                            }
+////                                                                                                                        }.start();
+////                                                                                                                    }
+////                                                                                                                }.start();
+////                                                                                                            }
+////                                                                                                        }.start();
+////
+////                                                                                                    }
+////                                                                                                }.start();
+////                                                                                            }
+////                                                                                        }.start();
+////                                                                                    }
+////                                                                                }.start();
+////                                                                            }
+////                                                                        }.start();
+////                                                                    }
+////                                                                }.start();
+////
+////                                                            }
+////                                                        }.start();
+////                                                    }
+////                                                }.start();
+////                                            }
+////                                        }.start();
+////                                    }
+////                                }.start();
+////                            }
+////                        }.start();
+////
+////                    }
+////                }.start();
+//            }
+//        }.start();
+//
+//    }
 
 }

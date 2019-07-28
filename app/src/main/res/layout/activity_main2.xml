@@ -5,42 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/stretching"
     tools:context="com.example.android.tflitecamerademo.activity.Main2Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Office Syndrome"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="#df622b"
+            android:background="#ecd5cd"/>
         <Button
             android:id="@+id/p1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Position1"/>
+            android:text="ออกกำลังกาย"/>
         <Button
             android:id="@+id/p2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Position1"/>
-        <Button
-            android:id="@+id/p3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Position1"/>
-        <Button
-            android:id="@+id/p4"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Position1"/>
-        <Button
-            android:id="@+id/p5"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Position1"/>
-        <Button
-            android:id="@+id/p6"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Position1"/>
+            android:text="ตั้งเวลาเตือน"/>
+
 
     </LinearLayout>
 

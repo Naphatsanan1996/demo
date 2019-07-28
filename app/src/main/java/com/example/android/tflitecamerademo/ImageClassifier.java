@@ -181,7 +181,6 @@ public abstract class ImageClassifier {
             Log.e(TAG, "Image classifier has not been initialized; Skipped.");
             builder.append(new SpannableString("Uninitialized Classifier."));
         }
-
         convertBitmapToByteBuffer(bitmap);
 
         // Here's where the magic happens!!!
@@ -189,11 +188,7 @@ public abstract class ImageClassifier {
         runInference();
         long endTime = SystemClock.uptimeMillis();
         Log.d(TAG, "Timecost to run model inference: " + Long.toString(endTime - startTime));
-
-
         drawBodyPoint();
-
-
         // Smooth the results across frames.
         //applyFilter();
 
@@ -221,13 +216,12 @@ public abstract class ImageClassifier {
             result = findMaximumIndex(heatmap);
 //            Log.d("Bodypoint", "index[" + k + "] = " + " " + result[0] + " " + result[1] + " ");/*point Body Position*/
             arr[k] = result;
-
         }
         DrawView.setArr(arr);
 
 
     }
-  
+
 
     private static float[] findMaximumIndex(float[][] a) {
         float maxVal = -99999;
