@@ -220,6 +220,7 @@ public abstract class ImageClassifier {
         DrawView.setArr(arr);
 
 
+
     }
 
 
