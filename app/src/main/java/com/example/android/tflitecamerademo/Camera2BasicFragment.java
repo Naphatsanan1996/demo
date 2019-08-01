@@ -267,6 +267,7 @@ public class Camera2BasicFragment extends Fragment
         imageView.setImageResource(R.drawable.p01);
         textView = view.findViewById(R.id.texttime);
         TextDis.setText(R.string.p0);
+        TextNumPos.setText("ท่าที่ 1");
 
 
 //        runtimePosition(textView,imageView);
@@ -624,65 +625,111 @@ public class Camera2BasicFragment extends Fragment
 
     public static void runtimePosition(String textdis, int check) {
 
-
-        new CountDownTimer(5000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                textView.setText("" + millisUntilFinished / 1000);
-                //here you can have your logic to set text to edittext
-            }
-
-            @Override
-            public void onFinish() {
+//        new CountDownTimer(5000, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                textView.setText("" + millisUntilFinished / 1000);
+//                //here you can have your logic to set text to edittext
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//               /* else if (check == 3) {
+//                    imageView.setImageResource(R.drawable.p01);
+//                    TextDis.setText(textdis);
+//                }*/
                 if (check == 1) {
-
+                    TextNumPos.setText("ท่าที่ 1.1");
                     imageView.setImageResource(R.drawable.p02);
                     TextDis.setText(textdis);
                 } else if (check == 2) {
-
+                    TextNumPos.setText("ท่าที่ 1.2");
                     imageView.setImageResource(R.drawable.p03);
                     TextDis.setText(textdis);
-                } else if (check == 3) {
+                }
 
+                else if (check == 3) {
+                    TextNumPos.setText("ท่าที่ 2");
+                    imageView.setImageResource(R.drawable.p01);
+                    TextDis.setText(textdis);
+                }else if (check == 4) {
+                    TextNumPos.setText("ท่าที่ 2.1");
                     imageView.setImageResource(R.drawable.p04);
                     TextDis.setText(textdis);
-                } else if (check == 4) {
-
+                } else if (check == 5) {
+                    TextNumPos.setText("ท่าที่ 2.2");
                     imageView.setImageResource(R.drawable.p05);
                     TextDis.setText(textdis);
-                } else if (check == 5) {
+                }
 
+                else if (check == 6) {
+                    TextNumPos.setText("ท่าที่ 3");
+                    imageView.setImageResource(R.drawable.p01);
+                    TextDis.setText(textdis);
+                }else if (check == 7) {
+                    TextNumPos.setText("ท่าที่ 3.1");
                     imageView.setImageResource(R.drawable.p06);
                     TextDis.setText(textdis);
-                } else if (check == 6) {
-
-                    imageView.setImageResource(R.drawable.p07);
-                    TextDis.setText(textdis);
-                } else if (check == 7) {
-
-                    imageView.setImageResource(R.drawable.p08);
-                    TextDis.setText(textdis);
-                } else if (check == 8) {
-
-                    imageView.setImageResource(R.drawable.p09);
-                    TextDis.setText(textdis);
-                } else if (check == 9) {
-
-                    imageView.setImageResource(R.drawable.p10);
-                    TextDis.setText(textdis);
-                } else if (check == 10) {
-
-                    imageView.setImageResource(R.drawable.p11);
-                    TextDis.setText(textdis);
-                } else if (check == 11) {
-
+                }
+                else if (check == 8) {
+                    TextNumPos.setText("ท่าที่ 3.2");
                     imageView.setImageResource(R.drawable.p01);
                     TextDis.setText(textdis);
                 }
 
+                else if (check == 9) {
+                    TextNumPos.setText("ท่าที่ 4");
+                    imageView.setImageResource(R.drawable.p07);
+                    TextDis.setText(textdis);
+                }
 
-            }
-        }.start();
+                else if (check == 10) {
+                    TextNumPos.setText("ท่าที่ 4");
+                    imageView.setImageResource(R.drawable.p01);
+                    TextDis.setText(textdis);
+                }
+                else if (check == 11) {
+                    TextNumPos.setText("ท่าที่ 4.1");
+                    imageView.setImageResource(R.drawable.p08);
+                    TextDis.setText(textdis);
+                }
+                else if (check == 12) {
+                    TextNumPos.setText("ท่าที่ 4.2");
+                    imageView.setImageResource(R.drawable.p08);
+                    TextDis.setText(textdis);
+                }else if (check == 13) {
+                    TextNumPos.setText("ท่าที่ 1.3");
+                    imageView.setImageResource(R.drawable.p09);
+                    TextDis.setText(textdis);
+                }
+                else if (check == 14) {
+                    TextNumPos.setText("ท่าที่ 5");
+                    imageView.setImageResource(R.drawable.p01);
+                    TextDis.setText(textdis);
+                }
+                else if (check == 15) {
+                    TextNumPos.setText("ท่าที่ 5.1");
+                    imageView.setImageResource(R.drawable.p10);
+                    TextDis.setText(textdis);
+                }
+                else if (check == 16) {
+                    TextNumPos.setText("ท่าที่ 6");
+                    imageView.setImageResource(R.drawable.p10);
+                    TextDis.setText(textdis);
+                }
+               else if (check == 17) {
+                    TextNumPos.setText("ท่าที่ 6.1");
+                    imageView.setImageResource(R.drawable.p11);
+                    TextDis.setText(textdis);
+                } else if (check == 18) {
+                    TextNumPos.setText("ท่าที่ 1");
+                    imageView.setImageResource(R.drawable.p01);
+                    TextDis.setText(textdis);
+                }
+
+//
+//            }
+//        }.start();
 
     }
 
