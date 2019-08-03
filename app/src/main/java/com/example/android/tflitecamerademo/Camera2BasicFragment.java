@@ -673,7 +673,7 @@ public class Camera2BasicFragment extends Fragment
             imageView.setImageResource(R.drawable.p08);
             TextDis.setText(textdis);
         } else if (check == 14) {
-            TextNumPos.setText("ท่าที่ 1.3");
+            TextNumPos.setText("ท่าที่ 4.3");
             imageView.setImageResource(R.drawable.p09);
             TextDis.setText(textdis);
         } else if (check == 15) {
