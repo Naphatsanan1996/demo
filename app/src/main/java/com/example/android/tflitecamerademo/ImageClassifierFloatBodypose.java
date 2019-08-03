@@ -49,7 +49,6 @@ public class ImageClassifierFloatBodypose extends ImageClassifier {
         super(activity);
         jointProbArray = new float[1][getHeatmapWidth()][getHeatmapHeight()][getNumJoint()];
     }
-
     @Override
     protected String getModelPath() {
         // you can download this file from
@@ -88,13 +87,11 @@ public class ImageClassifierFloatBodypose extends ImageClassifier {
 
     @Override
     protected void addPixelValue(int pixelValue) {
-
     /*
     imgData.putFloat((pixelValue & 0xFF) / 255.f);
     imgData.putFloat(((pixelValue >> 8) & 0xFF) / 255.f);
     imgData.putFloat(((pixelValue >> 16) & 0xFF) / 255.f);
     */
-
         imgData.putFloat(Float.valueOf(pixelValue & 0xFF));
         imgData.putFloat(Float.valueOf(pixelValue >> 8 & 0xFF));
         imgData.putFloat(Float.valueOf(pixelValue >> 16 & 0xFF));
@@ -105,9 +102,7 @@ public class ImageClassifierFloatBodypose extends ImageClassifier {
     protected float getProbability(int index, int width, int height, int joint) {
         return jointProbArray[index][width][height][joint];
     }
-
-
-  /*
+    /*
   @Override
   protected void setProbability(int labelIndex, Number value) {
     labelProbArray[0][labelIndex] = value.floatValue();

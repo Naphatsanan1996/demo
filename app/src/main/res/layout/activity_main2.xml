@@ -5,34 +5,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/stretching"
+    android:background="#f7b71d"
     tools:context="com.example.android.tflitecamerademo.activity.Main2Activity">
 
-    <LinearLayout
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3">
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:weightSum="2"
+    >
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
+        android:layout_height="0dp"
+        android:layout_weight="1.75"
+
+        />
+
+    <TextView
+        android:layout_weight="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="OFFICE SYNDROME"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/prompt_medium"
+        android:textSize="30sp"
+
+        />
+</LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#fdef96"
+        android:layout_margin="15dp"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:text="Office Syndrome"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textColor="#df622b"
-            android:background="#ecd5cd"/>
-        <Button
-            android:id="@+id/p1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/stretching"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="ออกกำลังกาย"
+                android:gravity="center"
+                android:fontFamily="@font/prompt_medium"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#fdef96"
+        android:layout_margin="15dp"
+        >
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="ออกกำลังกาย"/>
-        <Button
-            android:id="@+id/p2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="ตั้งเวลาเตือน"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/stretching"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="ออกกำลังกาย"
+                android:gravity="center"
+                android:fontFamily="@font/prompt_medium"
+                android:textSize="20sp"
+
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 
-    </LinearLayout>
 
+</LinearLayout>
 
 </LinearLayout>

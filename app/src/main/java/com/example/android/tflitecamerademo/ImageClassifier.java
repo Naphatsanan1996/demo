@@ -218,9 +218,6 @@ public abstract class ImageClassifier {
             arr[k] = result;
         }
         DrawView.setArr(arr);
-
-
-
     }
 
 
@@ -260,9 +257,6 @@ public abstract class ImageClassifier {
         return (((HALF_DEGREE - Math.abs(betweenAngle - compareNumber))) / HALF_DEGREE) * 100;
     }
 
-
-
-
     private void recreateInterpreter() {
         if (tflite != null) {
             tflite.close();
@@ -271,7 +265,6 @@ public abstract class ImageClassifier {
             tflite = new Interpreter(tfliteModel, tfliteOptions);
         }
     }
-
 
     /**
      * Closes tflite to release resources.
