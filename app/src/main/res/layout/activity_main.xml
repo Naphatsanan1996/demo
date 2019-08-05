@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7b71d">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:text="ไม่มีการแจ้งเตือน"
+        android:layout_marginTop="25dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/prompt_medium"/>
+
+    <LinearLayout
+
+        android:layout_below="@id/textView"
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button_timepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/prompt_medium"
+            android:text="ตั้งค่าการแจ้งเตือน" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_timepicker"
+            android:fontFamily="@font/prompt_medium"
+            android:text="ยกเลิกการแจ้งเตือน" />
+    </LinearLayout>
+
+    <Switch
+        android:layout_below="@id/linearlayout"
+        android:id="@+id/simpleSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:checked="true"
+        android:text="แจ้งเตือนทุก 1 ชม."
+        android:fontFamily="@font/prompt_medium"
+        android:textSize="25dp">
+
+    </Switch>
+    <TextView
+        android:layout_below="@id/simpleSwitch"
+        android:id="@+id/textViewSw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/prompt_medium"
+        android:text="สถานะ" />
+
+</RelativeLayout>
