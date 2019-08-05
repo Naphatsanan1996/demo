@@ -47,7 +47,6 @@ public class DrawView extends View {
     ImageView imageView;
 
 
-
     double X = 0,
             Y = 0,
             x1[] = new double[8],
@@ -175,7 +174,7 @@ public class DrawView extends View {
                 Position6_3(canvas);
                 break;
             case 19:
-                Position1(canvas);
+                End();
                 break;
         }
     }
@@ -195,14 +194,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
-            position[0][1] = x;            position[0][0] = y - 198;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 50;
-            position[3][1] = x - 225;            position[3][0] = y + 219;
-            position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 198;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
@@ -216,6 +223,7 @@ public class DrawView extends View {
                     public void onTick(long millis) {
                         Camera2BasicFragment.textView.setText("" + millis / 1000);
                     }
+
                     @Override
                     public void onFinish() {
                         cheak = 2;
@@ -236,14 +244,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
 
-            position[0][1] = x;            position[0][0] = y - 248;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y;
-            position[3][1] = x - 405;            position[3][0] = y;
-            position[4][1] = x - 315;            position[4][0] = y - 198;
-            position[5][1] = x + 180;            position[5][0] = y;
-            position[6][1] = x + 405;            position[6][0] = y;
-            position[7][1] = x + 360;            position[7][0] = y - 198;
+            position[0][1] = x;
+            position[0][0] = y - 248;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y;
+            position[3][1] = x - 405;
+            position[3][0] = y;
+            position[4][1] = x - 315;
+            position[4][0] = y - 198;
+            position[5][1] = x + 180;
+            position[5][0] = y;
+            position[6][1] = x + 405;
+            position[6][0] = y;
+            position[7][1] = x + 360;
+            position[7][0] = y - 198;
 
             distanceCompare();
             drawPosition(canvas);
@@ -256,6 +272,7 @@ public class DrawView extends View {
                         Camera2BasicFragment.textView.setText("" + millis / 1000);
                         //here you can have your logic to set text to edittext
                     }
+
                     @Override
                     public void onFinish() {
                         cheak = 3;
@@ -279,14 +296,22 @@ public class DrawView extends View {
 //        int x = 540;
 //        int y = 596;
 
-            position[0][1] = x;            position[0][0] = y - 150;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y;
-            position[3][1] = x - 380;            position[3][0] = y - 100;
-            position[4][1] = x - 180;            position[4][0] = y - 100;
-            position[5][1] = x + 180;            position[5][0] = y;
-            position[6][1] = x + 380;            position[6][0] = y - 100;
-            position[7][1] = x + 180;            position[7][0] = y - 100;
+            position[0][1] = x;
+            position[0][0] = y - 150;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y;
+            position[3][1] = x - 380;
+            position[3][0] = y - 100;
+            position[4][1] = x - 180;
+            position[4][0] = y - 100;
+            position[5][1] = x + 180;
+            position[5][0] = y;
+            position[6][1] = x + 380;
+            position[6][0] = y - 100;
+            position[7][1] = x + 180;
+            position[7][0] = y - 100;
 
             distanceCompare();
             drawPosition(canvas);
@@ -318,14 +343,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
-            position[0][1] = x;            position[0][0] = y - 198;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 50;
-            position[3][1] = x - 225;            position[3][0] = y + 219;
-            position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 198;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
 
             distanceCompare();
             drawPosition(canvas);
@@ -337,7 +370,7 @@ public class DrawView extends View {
                 new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
-                         Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                     }
 
                     @Override
@@ -358,19 +391,26 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=540  y=596*/
-            position[0][1] = x;            position[0][0] = y - 149;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 135;            position[2][0] = y + 49;
-            position[3][1] = x - 315;            position[3][0] = y + 99;
-            position[4][1] = x - 90;            position[4][0] = y + 99;
-            position[5][1] = x + 135;            position[5][0] = y + 49;
-            position[6][1] = x + 345;            position[6][0] = y + 99;
-            position[7][1] = x + 90;            position[7][0] = y + 99;
+            position[0][1] = x;
+            position[0][0] = y - 149;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 135;
+            position[2][0] = y + 49;
+            position[3][1] = x - 315;
+            position[3][0] = y + 99;
+            position[4][1] = x - 90;
+            position[4][0] = y + 99;
+            position[5][1] = x + 135;
+            position[5][0] = y + 49;
+            position[6][1] = x + 345;
+            position[6][0] = y + 99;
+            position[7][1] = x + 90;
+            position[7][0] = y + 99;
 
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
-
 
 
             if (ch[0] == true && ch[1] == true && ch[2] == true && ch[3] == true && ch[4] == true && ch[5] == true && ch[6] == true && ch[7] == true) {
@@ -379,7 +419,7 @@ public class DrawView extends View {
                 new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
-                         Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                         //here you can have your logic to set text to edittext
                     }
 
@@ -403,14 +443,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
 
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 135;            position[2][0] = y + 10;
-            position[3][1] = x - 135;            position[3][0] = y - 199;
-            position[4][1] = x - 135;            position[4][0] = y - 397;
-            position[5][1] = x + 135;            position[5][0] = y + 10;
-            position[6][1] = x + 135;            position[6][0] = y - 199;
-            position[7][1] = x + 135;            position[7][0] = y - 397;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 135;
+            position[2][0] = y + 10;
+            position[3][1] = x - 135;
+            position[3][0] = y - 199;
+            position[4][1] = x - 135;
+            position[4][0] = y - 397;
+            position[5][1] = x + 135;
+            position[5][0] = y + 10;
+            position[6][1] = x + 135;
+            position[6][0] = y - 199;
+            position[7][1] = x + 135;
+            position[7][0] = y - 397;
 
 
             distanceCompare();
@@ -424,7 +472,7 @@ public class DrawView extends View {
                 new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
-                       Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                         //here you can have your logic to set text to edittext
                     }
 
@@ -439,6 +487,7 @@ public class DrawView extends View {
             }
         }
     }
+
     public void Position3(Canvas canvas) {
 
         if (this.cheak == 7) {
@@ -447,14 +496,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
-            position[0][1] = x;            position[0][0] = y - 198;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 50;
-            position[3][1] = x - 225;            position[3][0] = y + 219;
-            position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 198;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
 
             distanceCompare();
             drawPosition(canvas);
@@ -466,7 +523,7 @@ public class DrawView extends View {
                 new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
-                     Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                     }
 
                     @Override
@@ -487,14 +544,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 49;
-            position[3][1] = x - 315;            position[3][0] = y + 198;
-            position[4][1] = x - 45;            position[4][0] = y + 198;
-            position[5][1] = x + 180;            position[5][0] = y + 49;
-            position[6][1] = x + 315;            position[6][0] = y + 198;
-            position[7][1] = x + 45;            position[7][0] = y + 198;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 49;
+            position[3][1] = x - 315;
+            position[3][0] = y + 198;
+            position[4][1] = x - 45;
+            position[4][0] = y + 198;
+            position[5][1] = x + 180;
+            position[5][0] = y + 49;
+            position[6][1] = x + 315;
+            position[6][0] = y + 198;
+            position[7][1] = x + 45;
+            position[7][0] = y + 198;
 
             distanceCompare();
             drawPosition(canvas);
@@ -508,7 +573,7 @@ public class DrawView extends View {
                     @Override
                     public void onTick(long millis) {
                         //here you can have your logic to set text to edittext
-                         Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                     }
 
                     @Override
@@ -529,14 +594,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
-            position[0][1] = x;            position[0][0] = y - 198;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 50;
-            position[3][1] = x - 225;            position[3][0] = y + 219;
-            position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 198;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
 
             distanceCompare();
             drawPosition(canvas);
@@ -550,6 +623,7 @@ public class DrawView extends View {
                     public void onTick(long millis) {
                         Camera2BasicFragment.textView.setText("" + millis / 1000);
                     }
+
                     @Override
                     public void onFinish() {
                         cheak = 10;
@@ -569,14 +643,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x = 540  y=496*/
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 49;
-            position[3][1] = x - 315;            position[3][0] = y + 198;
-            position[4][1] = x - 45;            position[4][0] = y + 198;
-            position[5][1] = x + 180;            position[5][0] = y + 49;
-            position[6][1] = x + 315;            position[6][0] = y + 198;
-            position[7][1] = x + 45;            position[7][0] = y + 198;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 49;
+            position[3][1] = x - 315;
+            position[3][0] = y + 198;
+            position[4][1] = x - 45;
+            position[4][0] = y + 198;
+            position[5][1] = x + 180;
+            position[5][0] = y + 49;
+            position[6][1] = x + 315;
+            position[6][0] = y + 198;
+            position[7][1] = x + 45;
+            position[7][0] = y + 198;
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
@@ -607,14 +689,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
-            position[0][1] = x;            position[0][0] = y - 198;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 50;
-            position[3][1] = x - 225;            position[3][0] = y + 219;
-            position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 198;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
 
             distanceCompare();
             drawPosition(canvas);
@@ -646,19 +736,27 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x = 540  y=546*/
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 135;            position[2][0] = y /*- 90*/;
-            position[3][1] = x - 180;            position[3][0] = y - 248;
-            position[4][1] = x - 180;            position[4][0] = y - 447;
-            position[5][1] = x + 135;            position[5][0] = y /*- 50*/;
-            position[6][1] = x + 180;            position[6][0] = y + 248;
-            position[7][1] = x + 180;            position[7][0] = y + 397;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 135;
+            position[2][0] = y /*- 90*/;
+            position[3][1] = x - 180;
+            position[3][0] = y - 248;
+            position[4][1] = x - 180;
+            position[4][0] = y - 447;
+            position[5][1] = x + 135;
+            position[5][0] = y /*- 50*/;
+            position[6][1] = x + 180;
+            position[6][0] = y + 248;
+            position[7][1] = x + 180;
+            position[7][0] = y + 397;
 
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
-            if (ch[0] == true && ch[1] == true && ch[2] == true  && ch[3] == true && ch[4] == true && ch[5] == true && ch[6] == true && ch[7] == true) {
+            if (ch[0] == true && ch[1] == true && ch[2] == true && ch[3] == true && ch[4] == true && ch[5] == true && ch[6] == true && ch[7] == true) {
                 TextView textView = myView.findViewById(R.id.texttime);
 
                 new CountDownTimer(10000, 1000) {
@@ -685,20 +783,28 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x = 540  y=546*/
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y - 30;
-            position[3][1] = x - 225;            position[3][0] = y - 203;
-            position[4][1] = x - 10;            position[4][0] = y - 199;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y - 30;
+            position[3][1] = x - 225;
+            position[3][0] = y - 203;
+            position[4][1] = x - 10;
+            position[4][0] = y - 199;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
 
 
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
-            if (ch[0] == true && ch[1] == true && ch[2] == true  && ch[3] == true && ch[4] == true && ch[5] == true && ch[6] == true && ch[7] == true) {
+            if (ch[0] == true && ch[1] == true && ch[2] == true && ch[3] == true && ch[4] == true && ch[5] == true && ch[6] == true && ch[7] == true) {
                 TextView textView = myView.findViewById(R.id.texttime);
 
                 new CountDownTimer(10000, 1000) {
@@ -725,14 +831,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=540 y=546*/
-            position[0][1] = x - 135;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y - 30;
-            position[3][1] = x - 225;            position[3][0] = y - 203;
-            position[4][1] = x - 10;            position[4][0] = y - 199;
-        position[5][1] = x + 135;            position[5][0] = y + 50;
-        position[6][1] = x + 225;            position[6][0] = y + 219;
-        position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x - 135;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y - 30;
+            position[3][1] = x - 225;
+            position[3][0] = y - 203;
+            position[4][1] = x - 10;
+            position[4][0] = y - 199;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
 
             distanceCompare();
             drawPosition(canvas);
@@ -763,14 +877,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
-            position[0][1] = x;            position[0][0] = y - 198;
-            position[1][1] = x;            position[1][0] = y;
-            position[2][1] = x - 180;            position[2][0] = y + 50;
-            position[3][1] = x - 225;            position[3][0] = y + 219;
-            position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 135;            position[5][0] = y + 50;
-            position[6][1] = x + 225;            position[6][0] = y + 219;
-            position[7][1] = x + 180;            position[7][0] = y + 398;
+            position[0][1] = x;
+            position[0][0] = y - 198;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 50;
+            position[6][1] = x + 225;
+            position[6][0] = y + 219;
+            position[7][1] = x + 180;
+            position[7][0] = y + 398;
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
@@ -805,14 +927,22 @@ public class DrawView extends View {
             int y = (int) arr[1][0];
             /*x=585  y=596*/
 
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-        position[2][1] = x - 180;            position[2][0] = y + 50;
-        position[3][1] = x - 225;            position[3][0] = y + 219;
-        position[4][1] = x - 180;            position[4][0] = y + 398;
-        position[5][1] = x + 135;            position[5][0] = y + 10;
-        position[6][1] = x + 135;            position[6][0] = y - 199;
-        position[7][1] = x + 135;            position[7][0] = y - 397;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 135;
+            position[5][0] = y + 10;
+            position[6][1] = x + 135;
+            position[6][0] = y - 199;
+            position[7][1] = x + 135;
+            position[7][0] = y - 397;
 
             distanceCompare();
             drawPosition(canvas);
@@ -823,7 +953,7 @@ public class DrawView extends View {
                 new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
-                         Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                         //here you can have your logic to set text to edittext
                     }
 
@@ -837,6 +967,7 @@ public class DrawView extends View {
             }
         }
     }
+
     public void Position6_2(Canvas canvas) {
 
         if (this.cheak == 17) {
@@ -846,14 +977,22 @@ public class DrawView extends View {
             int y = (int) arr[1][0];
             /*x=585  y=596*/
 
-            position[0][1] = x;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-        position[2][1] = x - 180;            position[2][0] = y + 50;
-        position[3][1] = x - 225;            position[3][0] = y + 219;
-        position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 180;            position[5][0] = y;
-            position[6][1] = x + 225;            position[6][0] = y - 203;
-            position[7][1] = x + 10;            position[7][0] = y - 199;
+            position[0][1] = x;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 180;
+            position[5][0] = y;
+            position[6][1] = x + 225;
+            position[6][0] = y - 203;
+            position[7][1] = x + 10;
+            position[7][0] = y - 199;
 
             distanceCompare();
             drawPosition(canvas);
@@ -878,6 +1017,7 @@ public class DrawView extends View {
             }
         }
     }
+
     public void Position6_3(Canvas canvas) {
 
         if (this.cheak == 18) {
@@ -885,14 +1025,22 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/
-            position[0][1] = x + 135;            position[0][0] = y - 199;
-            position[1][1] = x;            position[1][0] = y;
-        position[2][1] = x - 180;            position[2][0] = y + 50;
-        position[3][1] = x - 225;            position[3][0] = y + 219;
-        position[4][1] = x - 180;            position[4][0] = y + 398;
-            position[5][1] = x + 180;            position[5][0] = y;
-            position[6][1] = x + 225;            position[6][0] = y - 203;
-            position[7][1] = x + 10;            position[7][0] = y - 199;
+            position[0][1] = x + 135;
+            position[0][0] = y - 199;
+            position[1][1] = x;
+            position[1][0] = y;
+            position[2][1] = x - 180;
+            position[2][0] = y + 50;
+            position[3][1] = x - 225;
+            position[3][0] = y + 219;
+            position[4][1] = x - 180;
+            position[4][0] = y + 398;
+            position[5][1] = x + 180;
+            position[5][0] = y;
+            position[6][1] = x + 225;
+            position[6][0] = y - 203;
+            position[7][1] = x + 10;
+            position[7][0] = y - 199;
 
             distanceCompare();
             drawPosition(canvas);
@@ -903,12 +1051,13 @@ public class DrawView extends View {
                 new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
-                         Camera2BasicFragment.textView.setText("" + millis / 1000);
+                        Camera2BasicFragment.textView.setText("" + millis / 1000);
                         //here you can have your logic to set text to edittext
                     }
+
                     @Override
                     public void onFinish() {
-                        cheak = 1;
+                        cheak = 19;
                         Camera2BasicFragment.runtimePosition(txtdis, cheak);
                     }
                 }.start();
@@ -916,14 +1065,22 @@ public class DrawView extends View {
         }
     }
 
-    public void distanceCompare()  {
+    public void End() {
+        if (this.cheak == 19) {
+            cheak = 19;
+            txtdis = "สิ้นสุดการออกกำลังกาย";
+            Camera2BasicFragment.runtimePosition(txtdis, cheak);
+        }
+    }
+
+    public void distanceCompare() {
         for (int i = 0; i < 8; i++) {
             x1[i] = position[i][0];
             x2[i] = arr[i][0];
             y1[i] = position[i][1];
             y2[i] = arr[i][1];
-            X = Math.pow((x1[i] - x2[i]),2);
-            Y = Math.pow((y1[i] - y2[i]),2);
+            X = Math.pow((x1[i] - x2[i]), 2);
+            Y = Math.pow((y1[i] - y2[i]), 2);
             result[i] = Math.sqrt(X + Y);
             Log.d("Sqrt ", "index : " + i + " == " + result[i] + " ");
         }

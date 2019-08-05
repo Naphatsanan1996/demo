@@ -21,17 +21,20 @@
     android:orientation="vertical"
     android:weightSum="2"
     >
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.75"
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.50"
+        android:src="@drawable/work"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
         />
 
     <TextView
-        android:layout_weight="0.5"
+        android:layout_weight="0.50"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:text="OFFICE SYNDROME"
         android:gravity="center"
         android:textColor="@color/white"
@@ -47,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:cardBackgroundColor="#fdef96"
+        app:cardCornerRadius="15dp"
         android:layout_margin="15dp"
         >
         <LinearLayout
@@ -81,11 +85,13 @@
         android:layout_height="0dp"
         app:cardBackgroundColor="#fdef96"
         android:layout_margin="15dp"
+        app:cardCornerRadius="15dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+
             android:layout_margin="10dp">
             <ImageView
                 android:layout_width="match_parent"

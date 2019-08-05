@@ -19,6 +19,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -57,6 +58,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.android.tflitecamerademo.activity.CameraActivity;
+import com.example.android.tflitecamerademo.activity.Main2Activity;
 import com.example.android.tflitecamerademo.view.AutoFitTextureView;
 import com.example.android.tflitecamerademo.view.DrawView;
 
@@ -73,7 +76,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class Camera2BasicFragment extends Fragment
         implements FragmentCompat.OnRequestPermissionsResultCallback {
-
+    public static Context context;
     /**
      * Tag for the {@link Log}.
      */
@@ -96,7 +99,6 @@ public class Camera2BasicFragment extends Fragment
     private ImageClassifier classifier;
     public static int previewWidth;
     private Integer cameraPosition = CameraCharacteristics.LENS_FACING_BACK;
-
     public int check;
 
     /**
@@ -243,13 +245,18 @@ public class Camera2BasicFragment extends Fragment
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_camera2_basic_p1, container, false);
         Button switchButton = view.findViewById(R.id.switchCameraButton);
+        context = view.getContext();
         switchButton.setVisibility(View.GONE);
+//        switchButton.setVisibility(View.VISIBLE);
         switchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switchCamera();
             }
         });
+
+
+
         return view;
     }
 
@@ -487,7 +494,7 @@ public class Camera2BasicFragment extends Fragment
      * Starts a background thread and its {@link Handler}.
      */
 
-       private void startBackgroundThread() {
+    private void startBackgroundThread() {
         backgroundThread = new HandlerThread(HANDLE_THREAD_NAME);
         backgroundThread.start();
         backgroundHandler = new Handler(backgroundThread.getLooper());
@@ -670,11 +677,11 @@ public class Camera2BasicFragment extends Fragment
             TextDis.setText(textdis);
         } else if (check == 13) {
             TextNumPos.setText("ท่าที่ 4.2");
-            imageView.setImageResource(R.drawable.p08);
+            imageView.setImageResource(R.drawable.p09);
             TextDis.setText(textdis);
         } else if (check == 14) {
             TextNumPos.setText("ท่าที่ 4.3");
-            imageView.setImageResource(R.drawable.p09);
+            imageView.setImageResource(R.drawable.p10);
             TextDis.setText(textdis);
         } else if (check == 15) {
             TextNumPos.setText("ท่าที่ 5");
@@ -682,20 +689,22 @@ public class Camera2BasicFragment extends Fragment
             TextDis.setText(textdis);
         } else if (check == 16) {
             TextNumPos.setText("ท่าที่ 5.1");
-            imageView.setImageResource(R.drawable.p10);
+            imageView.setImageResource(R.drawable.p11);
             TextDis.setText(textdis);
         } else if (check == 17) {
             TextNumPos.setText("ท่าที่ 6");
-            imageView.setImageResource(R.drawable.p10);
+            imageView.setImageResource(R.drawable.p12);
             TextDis.setText(textdis);
         } else if (check == 18) {
             TextNumPos.setText("ท่าที่ 6.1");
-            imageView.setImageResource(R.drawable.p11);
+            imageView.setImageResource(R.drawable.p13);
             TextDis.setText(textdis);
         } else if (check == 19) {
-            TextNumPos.setText("ท่าที่ 1");
-            imageView.setImageResource(R.drawable.p01);
+
             TextDis.setText(textdis);
+                    Intent intent = new Intent(context, Main2Activity.class);
+                    context.startActivity(intent);
+
         }
 
 

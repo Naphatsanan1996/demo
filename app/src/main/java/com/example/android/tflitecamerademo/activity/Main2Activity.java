@@ -27,7 +27,15 @@ CardView exercise,timenoti;
                 startActivity(intent);
             }
         });
-        
+
+        timenoti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main2Activity.this,SetTimeNotification.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
