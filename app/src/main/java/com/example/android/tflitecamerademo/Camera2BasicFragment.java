@@ -700,11 +700,9 @@ public class Camera2BasicFragment extends Fragment
             imageView.setImageResource(R.drawable.p13);
             TextDis.setText(textdis);
         } else if (check == 19) {
-
             TextDis.setText(textdis);
                     Intent intent = new Intent(context, Main2Activity.class);
                     context.startActivity(intent);
-
         }
 
 
