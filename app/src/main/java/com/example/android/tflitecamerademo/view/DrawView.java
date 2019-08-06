@@ -831,22 +831,14 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=540 y=546*/
-            position[0][1] = x - 135;
-            position[0][0] = y - 199;
-            position[1][1] = x;
-            position[1][0] = y;
-            position[2][1] = x - 180;
-            position[2][0] = y - 30;
-            position[3][1] = x - 225;
-            position[3][0] = y - 203;
-            position[4][1] = x - 10;
-            position[4][0] = y - 199;
-            position[5][1] = x + 135;
-            position[5][0] = y + 50;
-            position[6][1] = x + 225;
-            position[6][0] = y + 219;
-            position[7][1] = x + 180;
-            position[7][0] = y + 398;
+            position[0][1] = x - 135;            position[0][0] = y - 199;
+            position[1][1] = x;            position[1][0] = y;
+            position[2][1] = x - 180;            position[2][0] = y - 30;
+            position[3][1] = x - 280;            position[3][0] = y - 190;
+            position[4][1] = x - 130;            position[4][0] = y - 199;
+            position[5][1] = x + 135;            position[5][0] = y + 50;
+            position[6][1] = x + 225;            position[6][0] = y + 219;
+            position[7][1] = x + 180;            position[7][0] = y + 398;
 
             distanceCompare();
             drawPosition(canvas);
@@ -1025,22 +1017,14 @@ public class DrawView extends View {
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/
-            position[0][1] = x + 135;
-            position[0][0] = y - 199;
-            position[1][1] = x;
-            position[1][0] = y;
-            position[2][1] = x - 180;
-            position[2][0] = y + 50;
-            position[3][1] = x - 225;
-            position[3][0] = y + 219;
-            position[4][1] = x - 180;
-            position[4][0] = y + 398;
-            position[5][1] = x + 180;
-            position[5][0] = y;
-            position[6][1] = x + 225;
-            position[6][0] = y - 203;
-            position[7][1] = x + 10;
-            position[7][0] = y - 199;
+            position[0][1] = x + 135;            position[0][0] = y - 199;
+            position[1][1] = x;                  position[1][0] = y;
+            position[2][1] = x - 180;            position[2][0] = y + 50;
+            position[3][1] = x - 225;            position[3][0] = y + 219;
+            position[4][1] = x - 180;            position[4][0] = y + 398;
+            position[5][1] = x + 180;            position[5][0] = y - 30;
+            position[6][1] = x + 280;            position[6][0] = y - 190;
+            position[7][1] = x + 130;             position[7][0] = y - 199;
 
             distanceCompare();
             drawPosition(canvas);
@@ -1048,10 +1032,12 @@ public class DrawView extends View {
             if (ch[0] == true && ch[1] == true && ch[2] == true && ch[3] == true && ch[4] == true && ch[5] == true && ch[6] == true && ch[7] == true) {
                 TextView textView = myView.findViewById(R.id.texttime);
 
-                new CountDownTimer(10000, 1000) {
+               new CountDownTimer(10000, 1000) {
                     @Override
                     public void onTick(long millis) {
+
                         Camera2BasicFragment.textView.setText("" + millis / 1000);
+
                         //here you can have your logic to set text to edittext
                     }
 
@@ -1059,6 +1045,7 @@ public class DrawView extends View {
                     public void onFinish() {
                         cheak = 19;
                         Camera2BasicFragment.runtimePosition(txtdis, cheak);
+
                     }
                 }.start();
             }
@@ -1067,7 +1054,7 @@ public class DrawView extends View {
 
     public void End() {
         if (this.cheak == 19) {
-            cheak = 19;
+            cheak = 0;
             txtdis = "สิ้นสุดการออกกำลังกาย";
             Camera2BasicFragment.runtimePosition(txtdis, cheak);
         }

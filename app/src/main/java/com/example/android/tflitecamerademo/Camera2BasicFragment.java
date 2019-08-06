@@ -256,7 +256,6 @@ public class Camera2BasicFragment extends Fragment
         });
 
 
-
         return view;
     }
 
@@ -701,8 +700,9 @@ public class Camera2BasicFragment extends Fragment
             TextDis.setText(textdis);
         } else if (check == 19) {
             TextDis.setText(textdis);
-                    Intent intent = new Intent(context, Main2Activity.class);
-                    context.startActivity(intent);
+            Intent intent = new Intent(context, Main2Activity.class);
+            context.startActivity(intent);
+
         }
 
 
