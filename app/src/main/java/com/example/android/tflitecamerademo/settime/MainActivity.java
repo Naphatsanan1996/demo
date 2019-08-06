@@ -8,10 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
+//import android.support.annotation.RequiresApi;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -21,6 +22,7 @@ import android.widget.TimePicker;
 
 import com.example.android.tflitecamerademo.R;
 
+import java.sql.Time;
 import java.text.DateFormat;
 import java.util.Calendar;
 
@@ -58,43 +60,20 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         setSwitch();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    //@RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         Calendar c = Calendar.getInstance();
         c.set(Calendar.HOUR_OF_DAY, hourOfDay);
         c.set(Calendar.MINUTE, minute);
-        c.set(Calendar.SECOND, 0);
+
         updateTimeText(c);
         startAlarm(c);
     }
 
-//    public void onTimeSetone() {
-//
-//
-//
-//            Calendar c = Calendar.getInstance();
-//            int hourspus = new Time(System.currentTimeMillis()).getHours();
-//            int minutes = new Time(System.currentTimeMillis()).getMinutes();
-//
-//            //int SumTime = minutes;
-////            int hourspus = hours+1;
-////            if(hourspus == 24){
-////                hourspus = 0;
-////            }
-//            /*int hourspus =2;
-//            int minutes=48;*/
-//            minutes = minutes+1;
-//
-//
-//            c.set(Calendar.HOUR_OF_DAY, hourspus);
-//            c.set(Calendar.MINUTE, minutes);
-//            c.set(Calendar.SECOND, 0);
-//            Log.i("Getdata", hourspus + ":" + minutes);
-//            startAlarm(c);
-//
-//
-//    }
+    public void onTimeSetone() {
+
+    }
 
     private void setSwitch( ) {
         Switch simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
@@ -105,10 +84,11 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
             public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked ) {
                 if (bChecked) {
                     sTextView.setText(switchOn);
-                    //onTimeSetone();
+                    onTimeSetone();
 
                 } else {
                     sTextView.setText(switchOff);
+                    cancelAlarm();
                 }
             }
         });
@@ -125,7 +105,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         mTextView.setText(timeText);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    //@RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void startAlarm(Calendar c) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
