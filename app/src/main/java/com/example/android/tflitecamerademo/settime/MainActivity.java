@@ -114,7 +114,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         mTextView.setText(timeText);
     }
 
-    //@RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void startAlarm(Calendar c) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(this, AlertReceiver.class);
