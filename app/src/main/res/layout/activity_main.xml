@@ -13,9 +13,9 @@
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
         android:text="ไม่มีการแจ้งเตือน"
-        android:layout_marginTop="25dp"
-        android:textSize="30sp"
+        android:textSize="30dp"
         android:fontFamily="@font/prompt_medium"/>
 
     <LinearLayout
@@ -31,7 +31,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/prompt_medium"
-            android:text="ตั้งค่าการแจ้งเตือน" />
+            android:textSize="15dp"
+            android:text="ตั้งเวลาการแจ้งเตือน" />
 
         <Button
             android:layout_weight="1"
@@ -40,20 +41,46 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/button_timepicker"
             android:fontFamily="@font/prompt_medium"
+            android:textSize="15dp"
             android:text="ยกเลิกการแจ้งเตือน" />
     </LinearLayout>
 
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/prompt_medium"
+        android:text="แจ้งเตือนทุก "
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <NumberPicker
+        android:layout_toRightOf="@id/textView1"
+        android:id="@+id/numberPicker1"
+        android:layout_marginTop="2dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:layout_below="@id/linearlayout"
+        android:theme="@style/NumberPickerText" />
+
     <Switch
+        android:layout_toRightOf="@id/numberPicker1"
         android:layout_below="@id/linearlayout"
         android:id="@+id/simpleSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
         android:checked="true"
-        android:text="แจ้งเตือนทุก 1 ชม."
+        android:text=" ชม."
         android:fontFamily="@font/prompt_medium"
-        android:textSize="25dp">
+        android:textSize="25dp"
+        android:layout_marginTop="30dp">
 
     </Switch>
     <TextView
@@ -61,8 +88,23 @@
         android:id="@+id/textViewSw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="65dp"
         android:fontFamily="@font/prompt_medium"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:text="สถานะ" />
+
+    <TextView
+        android:layout_below="@id/textViewSw"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:fontFamily="@font/prompt_medium"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:text="คำแนะนำ: ควรแจ้งเตือนทุก 1 ชม.หรือ           3 ชม. เป็นอย่างน้อย" />
+
+
 
 </RelativeLayout>

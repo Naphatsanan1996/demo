@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -15,18 +16,21 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.example.android.tflitecamerademo.R;
 
+import org.w3c.dom.Text;
+
 import java.text.DateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends FragmentActivity implements TimePickerDialog.OnTimeSetListener {
     private TextView mTextView;
-
+    private NumberPicker np;
     private TextView sTextView;
     private String switchOn = "สถานะ: เปิด";
     private String switchOff = "สถานะ: ปิด";
@@ -38,6 +42,10 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         setContentView(R.layout.activity_main);
 
         mTextView = findViewById(R.id.textView);
+        mTextView.setTextColor(Color.BLACK);
+        np = findViewById(R.id.numberPicker1);
+        np.setMinValue(1);
+        np.setMaxValue(24);
 
         Button buttonTimePicker = findViewById(R.id.button_timepicker);
         buttonTimePicker.setOnClickListener(new View.OnClickListener() {
@@ -78,10 +86,12 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
                 intent,
                 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + AlarmManager.INTERVAL_HALF_HOUR*2,
-                AlarmManager.INTERVAL_HALF_HOUR*2,
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,
+                System.currentTimeMillis() + (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
+                (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
                 pi);
-        Log.i("Time", "" + AlarmManager.INTERVAL_HALF_HOUR*2);
+        Log.i("Time", "" + System.currentTimeMillis() );
+        Log.i("Time", "" +(AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue());
     }
 
     private void setSwitch( ) {
@@ -93,10 +103,13 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
             public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked ) {
                 if (bChecked) {
                     sTextView.setText(switchOn);
+                    sTextView.setTextColor(Color.parseColor("#16DDAE"));
                     onTimeSetone();
+                    Log.i("Time", "" +np.getValue());
 
                 } else {
                     sTextView.setText(switchOff);
+                    sTextView.setTextColor(Color.BLACK);
                     cancelAlarm();
                 }
             }
@@ -111,6 +124,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
     private void updateTimeText(Calendar c) {
         String timeText = "แจ้งเตือนเวลา: ";
         timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
+        mTextView.setTextColor(Color.RED);
         mTextView.setText(timeText);
     }
 
@@ -131,6 +145,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         Intent intent = new Intent(this, AlertReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 1, intent, 0);
         alarmManager.cancel(pendingIntent);
+        mTextView.setTextColor(Color.BLACK);
         mTextView.setText("ไม่มีการแจ้งเตือน");
     }
 }
