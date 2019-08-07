@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.android.tflitecamerademo.R;
 import com.example.android.tflitecamerademo.settime.MainActivity;
+import com.example.android.tflitecamerademo.view.DrawView;
 
 public class Main2Activity extends Activity {
 CardView exercise,timenoti;
@@ -24,6 +25,7 @@ CardView exercise,timenoti;
         exercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DrawView.cheak = 1;
                 Intent intent = new Intent(Main2Activity.this,CameraActivity.class);
                 startActivity(intent);
             }
