@@ -47,8 +47,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         np.setWrapSelectorWheel(false);
         np.setMinValue(1);
         np.setMaxValue(3);
-        np.setDisplayedValues(new String[]{"1", "", "3"});
-
+        np.setWrapSelectorWheel(false);
         Button buttonTimePicker = findViewById(R.id.button_timepicker);
         buttonTimePicker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +94,8 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
 
         Log.i("TestTime", "" + (AlarmManager.INTERVAL_HALF_HOUR * 2) * np.getValue());
     }
+
+
 
     private void setSwitch( ) {
         Switch simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
