@@ -704,7 +704,6 @@ public class Camera2BasicFragment extends Fragment
             TextDis.setText(textdis);
             Intent intent = new Intent(context, Main2Activity.class);
             context.startActivity(intent);
-
         }
 
 
