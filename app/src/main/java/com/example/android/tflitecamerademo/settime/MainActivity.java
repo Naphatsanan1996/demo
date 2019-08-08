@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.example.android.tflitecamerademo.R;
+import com.example.android.tflitecamerademo.activity.Main2Activity;
 
 import org.w3c.dom.Text;
 
@@ -44,15 +45,17 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         mTextView = findViewById(R.id.textView);
         mTextView.setTextColor(Color.BLACK);
         np = findViewById(R.id.numberPicker1);
+        np.setWrapSelectorWheel(false);
         np.setMinValue(1);
-        np.setMaxValue(24);
+        np.setMaxValue(3);
+        np.setDisplayedValues(new String[]{"1", "", "3"});
 
         Button buttonTimePicker = findViewById(R.id.button_timepicker);
         buttonTimePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DialogFragment timePicker = new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(),"Time");
+                timePicker.show(getSupportFragmentManager(), "Time");
             }
         });
 
@@ -87,18 +90,20 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
                 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,
-                System.currentTimeMillis() + (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
-                (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
+                System.currentTimeMillis() + (AlarmManager.INTERVAL_HALF_HOUR * 2) * np.getValue(),
+                (AlarmManager.INTERVAL_HALF_HOUR * 2) * np.getValue(),
                 pi);
+
+        Log.i("TestTime", "" + (AlarmManager.INTERVAL_HALF_HOUR * 2) * np.getValue());
     }
 
-    private void setSwitch( ) {
+    private void setSwitch() {
         Switch simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
         sTextView = (TextView) findViewById(R.id.textViewSw);
         simpleSwitch.setChecked(false);
         simpleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked ) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked) {
                 if (bChecked) {
                     sTextView.setText(switchOn);
                     sTextView.setTextColor(Color.parseColor("#01BE84"));
@@ -144,4 +149,5 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         mTextView.setTextColor(Color.BLACK);
         mTextView.setText("ไม่มีการแจ้งเตือน");
     }
+
 }
