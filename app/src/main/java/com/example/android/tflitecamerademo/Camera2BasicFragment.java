@@ -417,19 +417,21 @@ public class Camera2BasicFragment extends Fragment
      */
     private void openCamera(int width, int height) {
         if (!checkedPermissions && !allPermissionsGranted()) {
-            FragmentCompat.requestPermissions(this, getRequiredPermissions(), PERMISSIONS_REQUEST_CODE);
+            FragmentCompat.requestPermissions(this,
+                    getRequiredPermissions(), PERMISSIONS_REQUEST_CODE);
             return;
         } else {
             checkedPermissions = true;
         }
         setUpCameraOutputs(width, height);
         Activity activity = getActivity();
-        CameraManager manager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
-        try {
-            if (!cameraOpenCloseLock.tryAcquire(2500, TimeUnit.MILLISECONDS)) {
-                throw new RuntimeException("Time out waiting to lock camera opening.");
-            }
-            if (ActivityCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+        CameraManager manager = (CameraManager)activity.getSystemService(Context.CAMERA_SERVICE);
+   try {
+      if (!cameraOpenCloseLock.tryAcquire(2500, TimeUnit.MILLISECONDS)) {
+          throw new RuntimeException("Time out waiting to lock camera opening.");
+      }
+      if (ActivityCompat.checkSelfPermission(activity,
+         Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -437,15 +439,15 @@ public class Camera2BasicFragment extends Fragment
                 //                                          int[] grantResults)
                 // to handle the case where the user grants the permission. See the documentation
                 // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            manager.openCamera(cameraId, stateCallback, backgroundHandler);
-        } catch (CameraAccessException e) {
-            Log.e(TAG, "Failed to open Camera", e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException("Interrupted while trying to lock camera opening.", e);
-        }
-    }
+         return;
+      }
+      manager.openCamera(cameraId, stateCallback, backgroundHandler);
+     } catch (CameraAccessException e) {
+       Log.e(TAG, "Failed to open Camera", e);
+      } catch (InterruptedException e) {
+         throw new RuntimeException("Interrupted while trying to lock camera opening.", e);
+      }
+   }
 
     private boolean allPermissionsGranted() {
         for (String permission : getRequiredPermissions()) {
