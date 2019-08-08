@@ -90,8 +90,6 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
                 System.currentTimeMillis() + (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
                 (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
                 pi);
-        Log.i("Time", "" + System.currentTimeMillis() );
-        Log.i("Time", "" +(AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue());
     }
 
     private void setSwitch( ) {
@@ -103,10 +101,8 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
             public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked ) {
                 if (bChecked) {
                     sTextView.setText(switchOn);
-                    sTextView.setTextColor(Color.parseColor("#16DDAE"));
+                    sTextView.setTextColor(Color.parseColor("#01BE84"));
                     onTimeSetone();
-                    Log.i("Time", "" +np.getValue());
-
                 } else {
                     sTextView.setText(switchOff);
                     sTextView.setTextColor(Color.BLACK);

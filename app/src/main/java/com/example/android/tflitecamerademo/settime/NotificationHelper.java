@@ -41,7 +41,5 @@ public class NotificationHelper extends ContextWrapper {
                 .setContentTitle("สวัสดีครับ")
                 .setContentText("มาออกกำลังกายกันเถอะครับ")
                 .setSmallIcon(R.drawable.stretching);
-
     }
-
 }
