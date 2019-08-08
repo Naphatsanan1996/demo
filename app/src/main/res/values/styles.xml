@@ -17,7 +17,11 @@
   <style name="MaterialTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" />
    <style name="AppTheme.Picker" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" >
     <item name="android:textColorPrimary">@android:color/white</item>
-
-</style>
+   </style>
+    <style name="NumberPickerText">
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:fadingEdgeLength">50dip</item>
+    </style>
 
 </resources>

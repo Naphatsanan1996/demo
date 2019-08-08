@@ -20,4 +20,6 @@
     <color name="selection_focus">#eeaa55</color>
     <color name="item_normal">#eeeeee</color>
     <color name="white">#ffffff</color>
+    <color name="black">#020202</color>
+    <color name="rad">#01BE84</color>
 </resources>
