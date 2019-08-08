@@ -45,7 +45,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         mTextView.setTextColor(Color.BLACK);
         np = findViewById(R.id.numberPicker1);
         np.setMinValue(1);
-        np.setMaxValue(24);
+        np.setMaxValue(3);
 
         Button buttonTimePicker = findViewById(R.id.button_timepicker);
         buttonTimePicker.setOnClickListener(new View.OnClickListener() {
