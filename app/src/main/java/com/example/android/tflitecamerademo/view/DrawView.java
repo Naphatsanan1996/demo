@@ -115,9 +115,12 @@ public class DrawView extends View {
 
         for (int i = 0; i < 8; i++) {
             canvas.drawPoint(arr[i][1], arr[i][0], paint[i]);
-            Log.d("check2", i + ": y= " + arr[i][0] + "---"
-                    + position[i][0] + " x= " + arr[i][1] + "---" + position[i][1]);
+            Log.d("check2", i + ": y= " +
+                    arr[i][0] + " x= " + arr[i][1] );
         }
+
+
+
         switch (this.cheak) {
             case  0 : break;
             case 1:
@@ -214,30 +217,15 @@ public class DrawView extends View {
             distanceCompare();
             drawPosition(canvas);
             checkPositioncom(canvas);
+
             if (ch[0] == true && ch[1] == true &&
                     ch[2] == true && ch[3] == true &&
                     ch[4] == true && ch[5] == true &&
                     ch[6] == true && ch[7] == true) {
-//                st = true;
                 clock(cheak);
-
-
-//                new CountDownTimer(10000, 1000) {
-//                    @Override
-//                    public void onTick(long millis) {
-////                        Camera2BasicFragment.textView.setText("" + millis / 1000);
-//                    }
-//
-//                    @Override
-//                    public void onFinish() {
-
                 cheak = 0;
-//                Camera2BasicFragment.runtimePosition(txtdis, cheak);
-//
-//                    }
-//                }.start();
-
             }
+
         }
     }
 
@@ -517,7 +505,7 @@ public class DrawView extends View {
 //                    }
 //                }.start();
             }
-            clock(cheak);
+
         }
     }
 
@@ -617,25 +605,11 @@ public class DrawView extends View {
 //                    @Override
 //                    public void onFinish() {
                 cheak = 0;
-//
 //                        Camera2BasicFragment.runtimePosition(txtdis, cheak);
 //                    }
 //                }.start();
 
-//                new CountDownTimer(10000, 1000) {
-//                    @Override
-//                    public void onTick(long millis) {
-//                        //here you can have your logic to set text to edittext
-//                        Camera2BasicFragment.textView.setText("" + millis / 1000);
-//                    }
 //
-//                    @Override
-//                    public void onFinish() {
-//                        cheak = 9;
-//                        Camera2BasicFragment.runtimePosition(txtdis, cheak);
-//                    }
-//                }.start();
-
             }
         }
     }
@@ -1197,21 +1171,20 @@ public class DrawView extends View {
     }
 
     public void clock(int check) {
-
-            new CountDownTimer(10000, 1000) {
-                @Override
-                public void onTick(long millis) {
-                    Camera2BasicFragment.textView.setText("" + millis / 1000);
-                    Log.d("time", "timeee" + millis / 1000);
-                }
-
-                @Override
-                public void onFinish() {
-                    cheak = check + 1;
-                    Camera2BasicFragment.runtimePosition(txtdis, cheak);
-                }
-            }.start();
-        }
+        new CountDownTimer(10000, 1000) {
+            @Override
+            public void onTick(long millis) {
+                Camera2BasicFragment.textView.setText("" + millis / 1000);
+                Log.d("time", "timeee" + millis / 1000);
+            }
+            @Override
+            public void onFinish() {
+                cheak = check + 1;
+                Log.d("time", "testcheck" + cheak);
+                Camera2BasicFragment.runtimePosition(txtdis, cheak);
+            }
+        }.start();
+    }
 
 
 }

@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_margin="20dp"
-            android:background="#FFFFFF"
+            android:textColor="#181B46"
             android:text="10"
             android:fontFamily="@font/prompt_medium"
             android:textSize="50sp" />
@@ -72,19 +72,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.30"
-                android:background="#444444"
+                android:background="#0359AE"
                 android:gravity="center"
                 android:text="เตรียม"
                 android:fontFamily="@font/prompt_medium"
                 android:textColor="#FFFFFF"
-
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.70"
-                android:background="#ff8b00"
+                android:background="#0359AE"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -92,7 +91,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+
                     android:layout_weight="0.70"
                     app:srcCompat="@drawable/p01" />
 
@@ -101,7 +100,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:layout_weight="1.30"
-                    app:cardBackgroundColor="#feffdb"
+                    app:cardBackgroundColor="#F2F4EF"
                     app:cardCornerRadius="15dp">
 
                     <TextView
@@ -109,8 +108,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/p01"
-                        android:textSize="25sp"
+                        android:text="@string/p12"
+                        android:textColor="#030305"
+                        android:textSize="20sp"
                         android:fontFamily="@font/prompt_regular"/>
                 </android.support.v7.widget.CardView>
 

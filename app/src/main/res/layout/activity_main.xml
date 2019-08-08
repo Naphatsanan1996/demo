@@ -1,110 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7b71d">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="30dp"
-        android:textColor="@color/black"
-        android:text="ไม่มีการแจ้งเตือน"
-        android:textSize="30dp"
-        android:fontFamily="@font/prompt_medium"/>
+    android:orientation="vertical"
+    android:background="#17419A"
+    >
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
 
-        android:layout_below="@id/textView"
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@color/white"
+            >
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/prompt_medium"
+                android:text="ไม่มีการแจ้งเตือน"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:layout_gravity="center"/>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
         android:id="@+id/linearlayout"
         android:layout_width="match_parent"
+            android:layout_margin="10dp"
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_weight="1"
             android:id="@+id/button_timepicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:fontFamily="@font/prompt_medium"
-            android:textSize="15dp"
-            android:text="ตั้งเวลาการแจ้งเตือน" />
+            android:background="@color/rad"
+            android:text="ตั้งเวลาการแจ้งเตือน"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
 
         <Button
-            android:layout_weight="1"
             android:id="@+id/button_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button_timepicker"
+            android:background="#DC2543"
+            android:layout_weight="1"
             android:fontFamily="@font/prompt_medium"
-            android:textSize="15dp"
-            android:text="ยกเลิกการแจ้งเตือน" />
+            android:text="ยกเลิกการแจ้งเตือน"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearlayout"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/prompt_medium"
-        android:text="แจ้งเตือนทุก "
-        android:textColor="@color/black"
-        android:textSize="25dp" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#17419A"
+        android:weightSum="2">
 
-    <NumberPicker
-        android:layout_toRightOf="@id/textView1"
-        android:id="@+id/numberPicker1"
-        android:layout_marginTop="2dp"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:scaleX="1"
-        android:scaleY="1"
-        android:layout_below="@id/linearlayout"
-        android:theme="@style/NumberPickerText" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#17419A"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <Switch
-        android:layout_toRightOf="@id/numberPicker1"
-        android:layout_below="@id/linearlayout"
-        android:id="@+id/simpleSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:checked="true"
-        android:text=" ชม."
-        android:fontFamily="@font/prompt_medium"
-        android:textSize="25dp"
-        android:layout_marginTop="30dp">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/prompt_medium"
+                android:text="แจ้งเตือนทุก "
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+            <NumberPicker
+                android:id="@+id/numberPicker1"
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="2dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:background="@color/white"
+                android:theme="@style/NumberPickerText" />
+            <Switch
+                android:id="@+id/simpleSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/prompt_medium"
+                android:text=" ชม."
+                android:textColor="@color/white"
+                android:textSize="25dp">
 
-    </Switch>
-    <TextView
-        android:layout_below="@id/simpleSwitch"
-        android:id="@+id/textViewSw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="65dp"
-        android:fontFamily="@font/prompt_medium"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="สถานะ" />
+            </Switch>
 
-    <TextView
-        android:layout_below="@id/textViewSw"
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="65dp"
-        android:fontFamily="@font/prompt_medium"
-        android:layout_marginTop="20dp"
-        android:textSize="15dp"
-        android:text="คำแนะนำ: ควรแจ้งเตือนทุก 1 ชม.หรือ           3 ชม. เป็นอย่างน้อย" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="25dp"
+            app:cardBackgroundColor="@color/white"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+             >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textViewSw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/prompt_medium"
+                        android:text="สถานะ"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/prompt_medium"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:text="คำแนะนำ:ควรแจ้งเตือนทุก 1 ชม.หรือ 3 ชม."
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
 
-</RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+
+</LinearLayout>
