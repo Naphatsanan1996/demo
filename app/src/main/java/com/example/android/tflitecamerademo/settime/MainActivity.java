@@ -21,6 +21,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.android.tflitecamerademo.R;
 
 import org.w3c.dom.Text;
@@ -127,6 +129,10 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         timeText += DateFormat.getTimeInstance(DateFormat.SHORT).format(c.getTime());
         mTextView.setTextColor(Color.RED);
         mTextView.setText(timeText);
+        YoYo.with(Techniques.Tada)
+                .duration(700)
+                .repeat(1)
+                .playOn(mTextView);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)

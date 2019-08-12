@@ -194,7 +194,7 @@ public class DrawView extends View {
     /*ท่าออกกำลังกาย*/
     public void Position1(Canvas canvas) {
         if (this.cheak == 1) {
-            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
+            txtdis = "ยกมือขึ้นให้แขนตั้งฉากขนานกับพื้น";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
@@ -233,7 +233,7 @@ public class DrawView extends View {
     public void Position1_2(Canvas canvas) {
 
         if (this.cheak == 2) {
-            txtdis = "ยกมือขึ้นให้แขนตั้งฉากขนานกับพื้น";
+            txtdis = "ประสานมือทั้งสองข้างไว้ที่ท้ายทอย ให้รู้สึกตึงบริเวณกล้ามเนื้อไหล่และต้นแขนเล็กน้อย";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
 
@@ -287,7 +287,7 @@ public class DrawView extends View {
 
 
         if (cheak == 3) {
-            txtdis = "ประสานมือทั้งสองข้างไว้ที่ท้ายทอย ให้รู้สึกตึงบริเวณกล้ามเนื้อไหล่และต้นแขนเล็กน้อย";
+            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
 //        int x = 540;
@@ -340,8 +340,8 @@ public class DrawView extends View {
 
     public void Position2(Canvas canvas) {
         if (this.cheak == 4) {
-            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
 
+            txtdis = "ประสานมือไว้ที่กลางอกและหันฝ่ามือออกด้านหน้า";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
@@ -405,7 +405,7 @@ public class DrawView extends View {
     public void Position2_1(Canvas canvas) {
 
         if (cheak == 5) {
-            txtdis = "ประสานมือไว้ที่กลางอก";
+            txtdis = "ประสานมือทั้งสองข้างไว้แล้วค่อยๆยกแขนขึ้น แขนทั้งสองข้างแบบบริเวณศีรษะ ให้รู้สึกตึงบริเวณกล้ามเนื้อไหล่และต้นแขนเล็กน้อย";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=540  y=596*/
@@ -458,7 +458,7 @@ public class DrawView extends View {
     public void Position2_2(Canvas canvas) {
 
         if (cheak == 6) {
-            txtdis = "ประสานมือทั้งสองข้างไว้แล้วค่อยๆยกแขนขึ้น แขนทั้งสองข้างแบบบริเวณศีรษะ ให้รู้สึกตึงบริเวณกล้ามเนื้อไหล่และต้นแขนเล็กน้อย";
+            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
 
@@ -512,8 +512,8 @@ public class DrawView extends View {
     public void Position3(Canvas canvas) {
 
         if (this.cheak == 7) {
-            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
 
+            txtdis = "ประสานฝ่ากันตรงบริเวณหน้าอก ดันฝ่ามือเข้าหากันเล็กน้อย ให้ท่อนแขนขนานกับพื้น";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
@@ -564,7 +564,7 @@ public class DrawView extends View {
     public void Position3_1(Canvas canvas) {
 
         if (cheak == 8) {
-            txtdis = "ประสานฝ่ากันตรงบริเวณหน้าอก ดันฝ่ามือเข้าหากันเล็กน้อย ให้ท่อนแขนขนานกับพื้น";
+            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/
@@ -616,8 +616,8 @@ public class DrawView extends View {
 
     public void Position4(Canvas canvas) {
         if (this.cheak == 9) {
-            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
 
+            txtdis = "เปลี่ยนจากประกบฝ่ามือด้านบน เป็นด้านล่างแทนบ้าง ท่อนแขนขนานพื้นเหมือนเดิม";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
@@ -666,8 +666,8 @@ public class DrawView extends View {
     public void Position4_1(Canvas canvas) {
 
         if (this.cheak == 10) {
-            txtdis = "เปลี่ยนจากประกบฝ่ามือด้านบน เป็นด้านล่างแทนบ้าง ท่อนแขนขนานพื้นเหมือนเดิม";
 
+            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x = 540  y=496*/
@@ -712,8 +712,8 @@ public class DrawView extends View {
 
     public void Position5(Canvas canvas) {
         if (this.cheak == 11) {
-            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
 
+            txtdis = "ยกมือขึ้นข้างซ้ายเหยีดตรงชิดแนบหู อีกข้างวางที่หน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
@@ -758,7 +758,7 @@ public class DrawView extends View {
     public void Position5_1(Canvas canvas) {
 
         if (this.cheak == 12) {
-            txtdis = "ยกมือขึ้น อีกข้างวางที่หน้าตัก";
+            txtdis = "นำมือที่ยกขึ้นมาแตะที่หูฝั่งตรงข้าม";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x = 540  y=546*/
@@ -804,7 +804,7 @@ public class DrawView extends View {
     public void Position5_2(Canvas canvas) {
 
         if (this.cheak == 13) {
-            txtdis = "นำมือที่ยกขึ้นมาแตะที่หูฝั่งตรงข้าม";
+            txtdis = "โน้นหัวไปที่หัวไหล่เล็กน้อยพอรู้สึกสบาย";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x = 540  y=546*/
@@ -851,7 +851,7 @@ public class DrawView extends View {
     public void Position5_3(Canvas canvas) {
 
         if (this.cheak == 14) {
-            txtdis = "โน้นหัวไปที่หัวไหล่เล็กน้อยพอรู้สึกสบาย";
+            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=540 y=546*/
@@ -895,7 +895,7 @@ public class DrawView extends View {
 
     public void Position6(Canvas canvas) {
         if (this.cheak == 15) {
-            txtdis = "ท่าเตรียม นั่งหลังตรง วางมือบนหน้าตัก";
+            txtdis = "ยกมือขึ้นข้างขวาเหยีดตรงชิดแนบหู อีกข้างวางที่หน้าตัก";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*(i,1) = Y,                    (i,0) = X*/
@@ -942,7 +942,7 @@ public class DrawView extends View {
     public void Position6_1(Canvas canvas) {
 
         if (this.cheak == 16) {
-            txtdis = "ยกมือขึ้น อีกข้างวางที่หน้าตัก";
+            txtdis = "นำมือที่ยกขึ้นมาแตะที่หูฝั่งตรงข้าม";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/
@@ -989,7 +989,7 @@ public class DrawView extends View {
 
         if (this.cheak == 17) {
 
-            txtdis = "นำมือที่ยกขึ้นมาแตะที่หูฝั่งตรงข้าม";
+            txtdis = "โน้นหัวไปที่หัวไหล่เล็กน้อยพอรู้สึกสบาย";
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/
@@ -1038,7 +1038,7 @@ public class DrawView extends View {
     public void Position6_3(Canvas canvas) {
 
         if (this.cheak == 18) {
-            txtdis = "โน้นหัวไปที่หัวไหล่เล็กน้อยพอรู้สึกสบาย";
+
             int x = (int) arr[1][1];
             int y = (int) arr[1][0];
             /*x=585  y=596*/

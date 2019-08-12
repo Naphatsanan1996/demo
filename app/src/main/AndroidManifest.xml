@@ -16,8 +16,9 @@
         android:icon="@drawable/stretching"
         android:label="@string/app_name"
         android:theme="@style/MaterialTheme">
-        <activity android:name=".activity.SetTimeNotification"></activity>
-        <activity android:name=".settime.MainActivity"></activity>
+        <activity android:name=".SlideActivity"></activity>
+        <activity android:name=".activity.SetTimeNotification" />
+        <activity android:name=".settime.MainActivity" />
         <activity android:name=".activity.CameraActivity" />
         <activity
             android:name=".activity.Main2Activity"
@@ -29,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <receiver android:name=".settime.AlertReceiver" />
     </application>
 
