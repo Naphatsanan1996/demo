@@ -20,16 +20,12 @@ public class TimePickerFragment extends DialogFragment {
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
 
-        Log.i("TestTime",""+hour+":"+minute);
-
-
         TimePickerDialog timePickerDialog = new TimePickerDialog(getActivity(),
                 android.R.style.Theme_Holo_Light_Dialog_NoActionBar_MinWidth,
                 (TimePickerDialog.OnTimeSetListener) getActivity(),
                 hour,
                 minute,
                 DateFormat.is24HourFormat(getActivity()));
-        Log.i("TestTime",""+hour+":"+minute);
         return timePickerDialog;
 
     }

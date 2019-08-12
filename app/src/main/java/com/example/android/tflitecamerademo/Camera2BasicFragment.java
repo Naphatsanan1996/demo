@@ -38,6 +38,7 @@ import android.hardware.camera2.CaptureResult;
 import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.ImageReader;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -60,6 +61,7 @@ import android.widget.TextView;
 
 import com.example.android.tflitecamerademo.activity.CameraActivity;
 import com.example.android.tflitecamerademo.activity.Main2Activity;
+import com.example.android.tflitecamerademo.settime.NotificationHelper;
 import com.example.android.tflitecamerademo.view.AutoFitTextureView;
 import com.example.android.tflitecamerademo.view.DrawView;
 
@@ -245,7 +247,7 @@ public class Camera2BasicFragment extends Fragment
             LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_camera2_basic_p1, container, false);
         Button switchButton = view.findViewById(R.id.switchCameraButton);
-        context = view.getContext();
+
         switchButton.setVisibility(View.GONE);
 //        switchButton.setVisibility(View.VISIBLE);
         switchButton.setOnClickListener(new View.OnClickListener() {
@@ -705,8 +707,6 @@ public class Camera2BasicFragment extends Fragment
             Intent intent = new Intent(context, Main2Activity.class);
             context.startActivity(intent);
         }
-
-
     }
 
 

@@ -1,6 +1,5 @@
 package com.example.android.tflitecamerademo.settime;
 
-import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.TimePickerDialog;
@@ -12,7 +11,6 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -24,8 +22,6 @@ import android.widget.TimePicker;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.example.android.tflitecamerademo.R;
-
-import org.w3c.dom.Text;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -81,20 +77,26 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
         startAlarm(c);
     }
 
-    public void onTimeSetone() {
+    public void setTime() {
 
         Intent intent = new Intent(this, AlertReceiver.class);
         PendingIntent pi = PendingIntent.getBroadcast(this,
                 1,
                 intent,
                 0);
+
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,
-                System.currentTimeMillis() + (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
-                (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
+                System.currentTimeMillis() + 60000*np.getValue(),
+                60000*np.getValue(),
                 pi);
 
-        Log.i("TestTime", "" + (AlarmManager.INTERVAL_HALF_HOUR * 2) * np.getValue());
+
+//        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,
+//                System.currentTimeMillis() + (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
+//                (AlarmManager.INTERVAL_HALF_HOUR*2)*np.getValue(),
+//                pi);
     }
 
 
@@ -109,7 +111,7 @@ public class MainActivity extends FragmentActivity implements TimePickerDialog.O
                 if (bChecked) {
                     sTextView.setText(switchOn);
                     sTextView.setTextColor(Color.parseColor("#01BE84"));
-                    onTimeSetone();
+                    setTime();
                 } else {
                     sTextView.setText(switchOff);
                     sTextView.setTextColor(Color.BLACK);

@@ -7,11 +7,11 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 
 import com.example.android.tflitecamerademo.R;
-import com.example.android.tflitecamerademo.activity.CameraActivity;
 import com.example.android.tflitecamerademo.activity.Main2Activity;
 
 
@@ -42,14 +42,21 @@ public class NotificationHelper extends ContextWrapper {
     }
 
      public NotificationCompat.Builder getChannelNotification() {
-
-         Intent nIntent  = new Intent(this, CameraActivity.class) ;
-         PendingIntent nPendingIntent = PendingIntent.getActivity(this,1,nIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+         Intent nIntent  = new Intent(this, Main2Activity.class) ;
+         PendingIntent nPendingIntent = PendingIntent.getActivity(this,1,nIntent,
+                 PendingIntent.FLAG_UPDATE_CURRENT);
+         sound();
 
         return new  NotificationCompat.Builder(getApplicationContext(), channelID)
                 .setContentTitle("สวัสดีครับ")
                 .setContentText("มาออกกำลังกายกันเถอะครับ")
                 .setContentIntent(nPendingIntent)
+                .setAutoCancel(false)
                 .setSmallIcon(R.drawable.stretching);
+    }
+
+    public void  sound(){
+        MediaPlayer ring= MediaPlayer.create(NotificationHelper.this,R.raw.oringz);
+        ring.start();
     }
 }

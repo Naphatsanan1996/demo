@@ -29,7 +29,7 @@ public class Main2Activity extends Activity {
             @Override
             public void onClick(View v) {
                 DrawView.cheak = 1;
-                Intent intent = new Intent(Main2Activity.this, CameraActivity.class);
+                Intent intent = new Intent(Main2Activity.this,CameraActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,6 +51,8 @@ public class Main2Activity extends Activity {
         });
 
     }
+
+
 
 
 }
