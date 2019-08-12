@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 
 import com.example.android.tflitecamerademo.Camera2BasicFragment;
 import com.example.android.tflitecamerademo.R;
+import com.example.android.tflitecamerademo.activity.CameraActivity;
+import com.example.android.tflitecamerademo.settime.NotificationHelper;
 
 public class DrawView extends View {
     private static final int HEATMAPWIDTH = 96;
@@ -222,6 +225,7 @@ public class DrawView extends View {
                     ch[2] == true && ch[3] == true &&
                     ch[4] == true && ch[5] == true &&
                     ch[6] == true && ch[7] == true) {
+
                 clock(cheak);
                 cheak = 0;
             }
@@ -1175,16 +1179,32 @@ public class DrawView extends View {
             @Override
             public void onTick(long millis) {
                 Camera2BasicFragment.textView.setText("" + millis / 1000);
+
                 Log.d("time", "timeee" + millis / 1000);
             }
+
             @Override
             public void onFinish() {
                 cheak = check + 1;
+                sound();
                 Log.d("time", "testcheck" + cheak);
                 Camera2BasicFragment.runtimePosition(txtdis, cheak);
+
             }
         }.start();
     }
 
+    public void sound() {
+        MediaPlayer ring= MediaPlayer.create(getContext(),R.raw.oringz);
+        ring.start();
+        try {
+            //set time in mili
+            Thread.sleep(500);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        ring.stop();
+    }
 
 }
