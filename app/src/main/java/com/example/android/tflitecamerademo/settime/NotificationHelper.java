@@ -56,7 +56,7 @@ public class NotificationHelper extends ContextWrapper {
     }
 
     public void  sound(){
-        MediaPlayer ring= MediaPlayer.create(NotificationHelper.this,R.raw.run);
+        MediaPlayer ring= MediaPlayer.create(NotificationHelper.this,R.raw.oringz);
         ring.start();
     }
 }
