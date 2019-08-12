@@ -45,7 +45,8 @@ public class NotificationHelper extends ContextWrapper {
          Intent nIntent  = new Intent(this, Main2Activity.class) ;
          PendingIntent nPendingIntent = PendingIntent.getActivity(this,1,nIntent,
                  PendingIntent.FLAG_UPDATE_CURRENT);
-         sound();
+         MediaPlayer ring= MediaPlayer.create(NotificationHelper.this,R.raw.oringz);
+         ring.start();
 
         return new  NotificationCompat.Builder(getApplicationContext(), channelID)
                 .setContentTitle("สวัสดีครับ")
@@ -55,8 +56,5 @@ public class NotificationHelper extends ContextWrapper {
                 .setSmallIcon(R.drawable.stretching);
     }
 
-    public void  sound(){
-        MediaPlayer ring= MediaPlayer.create(NotificationHelper.this,R.raw.oringz);
-        ring.start();
-    }
+
 }
